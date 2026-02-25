@@ -1,8 +1,7 @@
 <template>
   <nav id="navbar" ref="navbarRef">
     <a href="#inicio" class="nav-logo">
-      <div class="nav-logo-mark"></div>
-      <span class="nav-logo-text">Pacifica Constructora</span>
+      <img src="/imagenes/logo-pacifica-cm.webp" alt="Pacifica Constructora Logo" class="nav-logo-img" />
     </a>
 
     <div class="nav-links">

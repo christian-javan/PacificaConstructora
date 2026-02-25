@@ -1,11 +1,10 @@
 <template>
   <footer id="footer">
     <div class="footer-inner">
-      <div>
-        <div class="footer-logo-name">
-          <div class="footer-mark"></div>
-          Pacifica Constructora
-        </div>
+      <div class="footer-brand-col">
+        <a href="#inicio" class="footer-logo-link">
+          <img src="/imagenes/logo-pacifica-constructora.webp" alt="Pacifica Constructora Logo" class="footer-logo-img" />
+        </a>
         <p class="footer-desc">Construido con propósito. Soluciones integrales end-to-end en Baja California desde hace más de 8 años.</p>
         <div class="footer-socials">
           <a href="#" class="f-social" aria-label="Instagram">
