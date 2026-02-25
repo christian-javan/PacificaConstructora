@@ -1,0 +1,1538 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pacifica Constructora — Construido con propósito.</title>
+  <meta name="description" content="Soluciones integrales de construcción en Baja California. Planeación, obra y mantenimiento de instalaciones. Tijuana y Ensenada."/>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Bebas Neue (display) + Barlow (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet"/>
+
+  <style>
+    /* ══════════════════════════════════════════════
+       VARIABLES
+    ══════════════════════════════════════════════ */
+    :root {
+      --coal:       #0C0C0A;
+      --coal-2:     #141412;
+      --coal-3:     #1C1C19;
+      --coal-4:     #242421;
+      --amber:      #E8862A;
+      --amber-dim:  rgba(232,134,42,0.18);
+      --gold:       #F0B429;
+      --cream:      #F5F1EA;
+      --cream-2:    #EDE8DF;
+      --text-light: #F0EBE3;
+      --text-dim:   rgba(240,235,227,0.55);
+      --text-muted: #908880;
+      --border-dim: rgba(240,235,227,0.07);
+      --border-amber: rgba(232,134,42,0.22);
+    }
+
+    /* ══════════════════════════════════════════════
+       RESET & BASE
+    ══════════════════════════════════════════════ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Barlow', sans-serif;
+      font-weight: 400;
+      background: var(--coal);
+      color: var(--text-light);
+      overflow-x: hidden;
+    }
+    ::selection { background: var(--amber); color: var(--coal); }
+
+    /* ══════════════════════════════════════════════
+       TYPOGRAPHY SYSTEM
+    ══════════════════════════════════════════════ */
+    .f-display { font-family: 'Bebas Neue', sans-serif; letter-spacing: .02em; line-height: .92; }
+
+    /* Bebas Neue is all-caps by nature — we use it for huge impact titles */
+    .t-hero    { font-size: clamp(5rem, 13vw, 11.5rem); }
+    .t-section { font-size: clamp(3rem,  6vw,  5.5rem); }
+    .t-large   { font-size: clamp(2rem,  3.5vw, 3.2rem); }
+
+    .t-label {
+      font-family: 'Barlow', sans-serif;
+      font-size: .72rem; font-weight: 600;
+      letter-spacing: .22em; text-transform: uppercase;
+      color: var(--amber);
+    }
+    .t-body { font-size: .97rem; line-height: 1.75; font-weight: 300; }
+    .t-small { font-size: .83rem; line-height: 1.65; font-weight: 400; }
+
+    /* ══════════════════════════════════════════════
+       NOISE OVERLAY
+    ══════════════════════════════════════════════ */
+    .noise { position: relative; }
+    .noise::after {
+      content: ''; position: absolute; inset: 0; pointer-events: none; z-index: 2;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      mix-blend-mode: overlay; opacity: .6;
+    }
+
+    /* ══════════════════════════════════════════════
+       NAVBAR
+    ══════════════════════════════════════════════ */
+    #navbar {
+      position: fixed; top: 0; inset-x: 0; z-index: 100;
+      padding: 26px 56px;
+      display: flex; align-items: center; justify-content: space-between;
+      transition: padding .45s cubic-bezier(.16,1,.3,1),
+                  background .45s ease, border-color .45s ease;
+      border-bottom: 1px solid transparent;
+    }
+    #navbar.scrolled {
+      padding: 14px 56px;
+      background: rgba(12,12,10,.93);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border-bottom-color: var(--border-amber);
+    }
+    @media (max-width: 768px) {
+      #navbar        { padding: 20px 24px; }
+      #navbar.scrolled { padding: 14px 24px; }
+    }
+
+    .nav-logo {
+      display: flex; align-items: center; gap: 11px;
+      text-decoration: none; color: var(--text-light);
+    }
+    .nav-logo-mark {
+      width: 30px; height: 30px; background: var(--amber);
+      clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+      transition: transform .4s cubic-bezier(.16,1,.3,1);
+      flex-shrink: 0;
+    }
+    .nav-logo:hover .nav-logo-mark { transform: rotate(180deg); }
+    .nav-logo-text {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.45rem; letter-spacing: .08em;
+    }
+
+    .nav-links {
+      display: flex; align-items: center; gap: 36px;
+    }
+    .nav-link {
+      font-family: 'Barlow', sans-serif;
+      font-size: .78rem; font-weight: 500;
+      letter-spacing: .14em; text-transform: uppercase;
+      color: var(--text-dim); text-decoration: none;
+      transition: color .25s;
+      position: relative;
+    }
+    .nav-link::after {
+      content: ''; position: absolute; bottom: -4px; left: 0;
+      width: 0; height: 1px; background: var(--amber);
+      transition: width .3s ease;
+    }
+    .nav-link:hover { color: var(--text-light); }
+    .nav-link:hover::after { width: 100%; }
+
+    .nav-cta {
+      font-family: 'Barlow', sans-serif;
+      font-size: .78rem; font-weight: 600;
+      letter-spacing: .12em; text-transform: uppercase;
+      background: var(--amber); color: var(--coal);
+      padding: 10px 26px; text-decoration: none;
+      transition: background .25s, transform .2s;
+    }
+    .nav-cta:hover { background: var(--gold); transform: translateY(-1px); }
+
+    /* Mobile menu */
+    #mob-menu {
+      position: fixed; inset: 0; z-index: 99;
+      background: var(--coal-2);
+      display: flex; flex-direction: column;
+      justify-content: center; align-items: center; gap: 28px;
+      opacity: 0; pointer-events: none;
+      transition: opacity .35s ease;
+    }
+    #mob-menu.open { opacity: 1; pointer-events: all; }
+    #mob-menu a {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.8rem; letter-spacing: .06em;
+      color: var(--text-light); text-decoration: none;
+      transition: color .25s;
+    }
+    #mob-menu a:hover { color: var(--amber); }
+    .hamburger {
+      display: none; cursor: pointer;
+      flex-direction: column; gap: 5px; background: none; border: none;
+    }
+    .hamburger span {
+      display: block; width: 24px; height: 2px;
+      background: var(--text-light);
+      transition: transform .3s, opacity .3s;
+    }
+    @media (max-width: 900px) {
+      .nav-links, .nav-cta-desk { display: none !important; }
+      .hamburger { display: flex; }
+    }
+
+    /* ══════════════════════════════════════════════
+       BUTTONS
+    ══════════════════════════════════════════════ */
+    .btn-amber {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-family: 'Barlow', sans-serif;
+      font-size: .8rem; font-weight: 600;
+      letter-spacing: .12em; text-transform: uppercase;
+      text-decoration: none; color: var(--coal);
+      background: var(--amber);
+      padding: 14px 32px;
+      transition: background .25s, transform .2s, box-shadow .3s;
+    }
+    .btn-amber:hover {
+      background: var(--gold);
+      transform: translateY(-2px);
+      box-shadow: 0 14px 36px rgba(232,134,42,.28);
+    }
+    .btn-outline {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-family: 'Barlow', sans-serif;
+      font-size: .8rem; font-weight: 500;
+      letter-spacing: .12em; text-transform: uppercase;
+      text-decoration: none; color: var(--text-light);
+      border: 1px solid rgba(240,235,227,.22);
+      padding: 14px 32px;
+      transition: border-color .25s, background .25s, transform .2s;
+    }
+    .btn-outline:hover {
+      border-color: rgba(240,235,227,.55);
+      background: rgba(240,235,227,.05);
+      transform: translateY(-2px);
+    }
+
+    /* ══════════════════════════════════════════════
+       SCROLL REVEAL
+    ══════════════════════════════════════════════ */
+    .sr        { opacity: 0; transform: translateY(32px); transition: opacity .85s cubic-bezier(.16,1,.3,1), transform .85s cubic-bezier(.16,1,.3,1); }
+    .sr-left   { opacity: 0; transform: translateX(-36px); transition: opacity .85s cubic-bezier(.16,1,.3,1), transform .85s cubic-bezier(.16,1,.3,1); }
+    .sr-right  { opacity: 0; transform: translateX(36px);  transition: opacity .85s cubic-bezier(.16,1,.3,1), transform .85s cubic-bezier(.16,1,.3,1); }
+    .sr.vis, .sr-left.vis, .sr-right.vis { opacity: 1; transform: none; }
+    .d1{transition-delay:.08s!important}.d2{transition-delay:.16s!important}
+    .d3{transition-delay:.24s!important}.d4{transition-delay:.32s!important}
+    .d5{transition-delay:.40s!important}.d6{transition-delay:.48s!important}
+
+    /* ══════════════════════════════════════════════
+       LAYOUT HELPERS
+    ══════════════════════════════════════════════ */
+    .wrap    { max-width: 1320px; margin: 0 auto; }
+    .px-main { padding-left: 56px; padding-right: 56px; }
+    .py-sec  { padding-top: 108px; padding-bottom: 108px; }
+    @media (max-width: 768px) {
+      .px-main { padding-left: 24px; padding-right: 24px; }
+      .py-sec  { padding-top: 72px; padding-bottom: 72px; }
+    }
+
+    .eyebrow {
+      display: flex; align-items: center; gap: 14px; margin-bottom: 18px;
+    }
+    .eyebrow::before {
+      content: ''; width: 32px; height: 1px; background: var(--amber); flex-shrink: 0;
+    }
+
+    .amber-bar { width: 48px; height: 3px; background: var(--amber); }
+
+    /* ══════════════════════════════════════════════
+       HERO
+    ══════════════════════════════════════════════ */
+    #hero {
+      position: relative; min-height: 100vh;
+      display: flex; flex-direction: column; justify-content: flex-end;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background-image: url('https://images.unsplash.com/photo-1486325212027-8081e485255e?w=2200&q=85&auto=format&fit=crop');
+      background-size: cover; background-position: center 25%;
+    }
+    .hero-bg::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(
+        165deg,
+        rgba(12,12,10,.28) 0%,
+        rgba(12,12,10,.18) 25%,
+        rgba(12,12,10,.65) 65%,
+        rgba(12,12,10,.98) 100%
+      );
+    }
+    .hero-content {
+      position: relative; z-index: 3;
+      padding: 0 56px 80px;
+      max-width: 1320px; width: 100%;
+    }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 14px; margin-bottom: 24px;
+    }
+    .hero-eyebrow-line { width: 44px; height: 1px; background: var(--amber); }
+    .hero-eyebrow-text {
+      font-family: 'Barlow', sans-serif;
+      font-size: .72rem; font-weight: 600;
+      letter-spacing: .24em; text-transform: uppercase;
+      color: var(--amber);
+    }
+    .hero-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(5.5rem, 14vw, 12.5rem);
+      letter-spacing: .02em; line-height: .9;
+      color: var(--text-light); margin-bottom: 0;
+    }
+    /* Amber accent word */
+    .hero-title .amber-word { color: var(--amber); }
+
+    .hero-foot {
+      display: flex; align-items: flex-end;
+      justify-content: space-between; gap: 48px;
+      flex-wrap: wrap; margin-top: 40px;
+    }
+    .hero-sub {
+      max-width: 440px;
+      font-size: 1rem; font-weight: 300; line-height: 1.75;
+      color: rgba(240,235,227,.65);
+    }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+
+    /* Scroll cue */
+    .scroll-cue {
+      position: absolute; bottom: 32px; left: 56px; z-index: 3;
+      display: flex; align-items: center; gap: 10px;
+      color: rgba(240,235,227,.35);
+      font-size: .68rem; letter-spacing: .2em; text-transform: uppercase;
+      font-family: 'Barlow', sans-serif; font-weight: 500;
+    }
+    .scroll-cue-line {
+      width: 1px; height: 48px;
+      background: linear-gradient(to bottom, rgba(240,235,227,.35), transparent);
+    }
+
+    @media (max-width: 768px) {
+      .hero-content { padding: 0 24px 64px; }
+      .scroll-cue   { left: 24px; }
+    }
+
+    /* ══════════════════════════════════════════════
+       STATS BAR
+    ══════════════════════════════════════════════ */
+    #stats-bar { background: var(--coal-3); border-top: 1px solid var(--border-amber); }
+    .stats-inner {
+      display: grid; grid-template-columns: repeat(4,1fr);
+    }
+    @media (max-width: 700px) { .stats-inner { grid-template-columns: repeat(2,1fr); } }
+    .stat-cell {
+      padding: 30px 40px;
+      border-right: 1px solid var(--border-dim);
+    }
+    .stat-cell:last-child { border-right: none; }
+    .stat-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.8rem; letter-spacing: .04em; line-height: 1;
+      color: var(--amber);
+    }
+    .stat-lbl {
+      font-size: .72rem; font-weight: 500;
+      letter-spacing: .14em; text-transform: uppercase;
+      color: var(--text-muted); margin-top: 5px;
+    }
+    @media (max-width: 768px) { .stat-cell { padding: 22px 20px; } }
+
+    /* ══════════════════════════════════════════════
+       NOSOTROS
+    ══════════════════════════════════════════════ */
+    #nosotros { background: var(--cream); overflow: hidden; position: relative; }
+    #nosotros::before {
+      content: 'PACIFICA';
+      position: absolute; right: -60px; top: 50%; transform: translateY(-50%) rotate(90deg);
+      font-family: 'Bebas Neue', sans-serif; font-size: 13rem; letter-spacing: .1em;
+      color: rgba(12,12,10,.05); pointer-events: none; white-space: nowrap; line-height: 1;
+    }
+    .about-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 88px; align-items: center;
+    }
+    @media (max-width: 900px) {
+      .about-grid { grid-template-columns: 1fr; gap: 48px; }
+    }
+    .about-img-wrap { position: relative; }
+    .about-img {
+      width: 100%; height: 580px; object-fit: cover;
+      display: block; filter: grayscale(12%);
+    }
+    .about-badge {
+      position: absolute; bottom: 36px; left: -20px;
+      background: var(--amber); padding: 18px 26px;
+    }
+    .about-badge .b-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 3.2rem; letter-spacing: .04em; line-height: 1; color: var(--coal);
+    }
+    .about-badge .b-lbl {
+      font-size: .68rem; font-weight: 600;
+      letter-spacing: .16em; text-transform: uppercase;
+      color: rgba(12,12,10,.6); margin-top: 2px;
+    }
+    @media (max-width: 900px) {
+      .about-img { height: 320px; }
+      .about-badge { left: 12px; bottom: 20px; }
+    }
+    .value-row {
+      display: flex; gap: 18px; align-items: flex-start;
+      padding: 22px 0; border-bottom: 1px solid rgba(12,12,10,.08);
+    }
+    .value-row:last-child { border-bottom: none; }
+    .v-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.5rem; letter-spacing: .04em;
+      color: var(--amber); min-width: 36px; line-height: 1.1;
+    }
+    .v-title {
+      font-family: 'Barlow', sans-serif; font-size: .95rem; font-weight: 700;
+      color: var(--coal); margin-bottom: 4px; letter-spacing: .01em;
+    }
+    .v-body { font-size: .86rem; font-weight: 300; line-height: 1.6; color: #5A5650; }
+
+    /* ══════════════════════════════════════════════
+       MARQUEE
+    ══════════════════════════════════════════════ */
+    .marquee-wrap {
+      overflow: hidden;
+      background: var(--coal-4);
+      border-top: 1px solid var(--border-amber);
+      border-bottom: 1px solid var(--border-amber);
+      padding: 16px 0;
+    }
+    @keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+    .marquee-track {
+      display: flex; width: max-content;
+      animation: marquee 32s linear infinite;
+    }
+    .marquee-track:hover { animation-play-state: paused; }
+    .m-item {
+      display: flex; align-items: center; gap: 28px; padding: 0 28px; white-space: nowrap;
+    }
+    .m-text {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.1rem; letter-spacing: .12em;
+      color: rgba(144,136,128,.45);
+    }
+    .m-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--amber); flex-shrink: 0; }
+
+    /* ══════════════════════════════════════════════
+       SERVICIOS  (3 grandes bloques)
+    ══════════════════════════════════════════════ */
+    #servicios { background: var(--coal); }
+
+    .service-block {
+      display: grid; grid-template-columns: 1fr 1.4fr; gap: 0;
+      border-bottom: 1px solid var(--border-dim);
+      min-height: 420px;
+      transition: background .4s;
+    }
+    .service-block:hover { background: rgba(232,134,42,.025); }
+    .service-block:first-child { border-top: 1px solid var(--border-dim); }
+    .service-block-left {
+      padding: 64px 56px;
+      border-right: 1px solid var(--border-dim);
+      display: flex; flex-direction: column; justify-content: space-between;
+      position: relative; overflow: hidden;
+    }
+    .service-block-left::before {
+      content: '';
+      position: absolute; top: 0; left: 0;
+      width: 3px; height: 0; background: var(--amber);
+      transition: height .5s cubic-bezier(.16,1,.3,1);
+    }
+    .service-block:hover .service-block-left::before { height: 100%; }
+    .service-big-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 7rem; letter-spacing: .02em; line-height: 1;
+      color: rgba(240,235,227,.04);
+      position: absolute; bottom: 32px; right: 32px; pointer-events: none;
+      transition: color .4s;
+    }
+    .service-block:hover .service-big-num { color: rgba(232,134,42,.08); }
+    .service-tag {
+      display: inline-block;
+      font-size: .68rem; font-weight: 600; letter-spacing: .2em;
+      text-transform: uppercase; color: var(--amber);
+      border: 1px solid var(--border-amber);
+      padding: 5px 12px; margin-bottom: 20px;
+    }
+    .service-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2rem, 3.5vw, 3rem); letter-spacing: .04em; line-height: .95;
+      color: var(--text-light);
+    }
+    .service-objective {
+      font-size: .78rem; font-weight: 600; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--text-muted);
+      margin-top: 28px;
+    }
+    .service-obj-text {
+      font-size: .9rem; font-weight: 300; line-height: 1.6;
+      color: var(--text-dim); margin-top: 6px;
+    }
+
+    .service-block-right {
+      padding: 64px 56px;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 32px 40px;
+      align-content: start;
+    }
+    .svc-feature {
+      display: flex; flex-direction: column; gap: 8px;
+    }
+    .svc-feature-title {
+      font-size: .82rem; font-weight: 600;
+      letter-spacing: .06em; color: var(--text-light);
+      display: flex; align-items: center; gap: 8px;
+    }
+    .svc-feature-title::before {
+      content: ''; width: 6px; height: 6px; border-radius: 50%;
+      background: var(--amber); flex-shrink: 0;
+    }
+    .svc-feature-desc {
+      font-size: .82rem; font-weight: 300; line-height: 1.55;
+      color: var(--text-muted); padding-left: 14px;
+    }
+    .svc-icon-wrap {
+      width: 52px; height: 52px;
+      border: 1px solid var(--border-amber);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 20px;
+      transition: background .3s;
+    }
+    .service-block:hover .svc-icon-wrap { background: var(--amber-dim); }
+
+    @media (max-width: 900px) {
+      .service-block { grid-template-columns: 1fr; min-height: auto; }
+      .service-block-left { padding: 44px 24px; border-right: none; border-bottom: 1px solid var(--border-dim); }
+      .service-block-right { padding: 36px 24px; grid-template-columns: 1fr; }
+    }
+
+    /* ══════════════════════════════════════════════
+       MANTENIMIENTO (ahora Facility Services)
+    ══════════════════════════════════════════════ */
+    #mantenimiento { background: var(--coal-2); }
+    .maint-header-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: end; margin-bottom: 64px;
+    }
+    @media (max-width: 768px) { .maint-header-grid { grid-template-columns: 1fr; } }
+
+    .maint-grid {
+      display: grid; grid-template-columns: repeat(4,1fr); gap: 2px;
+    }
+    @media (max-width: 1000px) { .maint-grid { grid-template-columns: repeat(2,1fr); } }
+    @media (max-width: 600px)  { .maint-grid { grid-template-columns: 1fr; } }
+
+    .maint-card {
+      background: var(--coal-3); padding: 44px 36px;
+      position: relative; overflow: hidden;
+      transition: background .4s;
+    }
+    .maint-card:hover { background: var(--coal-4); }
+    .maint-card::after {
+      content: ''; position: absolute; top: 0; left: 0;
+      width: 100%; height: 3px; background: var(--amber);
+      transform: scaleX(0); transform-origin: left;
+      transition: transform .45s cubic-bezier(.16,1,.3,1);
+    }
+    .maint-card:hover::after { transform: scaleX(1); }
+    .maint-badge {
+      display: inline-block;
+      font-size: .65rem; font-weight: 600; letter-spacing: .2em;
+      text-transform: uppercase; color: var(--amber);
+      border: 1px solid var(--border-amber);
+      padding: 3px 10px; margin-bottom: 22px;
+    }
+    .maint-bg-num {
+      position: absolute; bottom: 16px; right: 20px;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 6rem; letter-spacing: .04em; line-height: 1;
+      color: rgba(240,235,227,.03); pointer-events: none;
+      transition: color .4s;
+    }
+    .maint-card:hover .maint-bg-num { color: rgba(232,134,42,.05); }
+    .maint-card-icon {
+      width: 40px; height: 40px;
+      border: 1px solid var(--border-amber);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 20px;
+    }
+    .maint-card-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.55rem; letter-spacing: .04em; line-height: 1.05;
+      color: var(--text-light); margin-bottom: 12px;
+    }
+    .maint-card-desc {
+      font-size: .84rem; font-weight: 300; line-height: 1.65;
+      color: var(--text-muted); margin-bottom: 22px;
+    }
+    .maint-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .maint-tag {
+      font-size: .68rem; letter-spacing: .07em;
+      padding: 4px 10px; color: rgba(240,235,227,.4);
+      border: 1px solid rgba(240,235,227,.07);
+    }
+
+    /* ══════════════════════════════════════════════
+       PORTAFOLIO
+    ══════════════════════════════════════════════ */
+    #portafolio { background: var(--cream); }
+    .port-header {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+      align-items: end; margin-bottom: 48px;
+    }
+    @media (max-width: 768px) { .port-header { grid-template-columns: 1fr; } }
+
+    .port-grid {
+      display: grid;
+      grid-template-columns: repeat(12,1fr);
+      grid-template-rows: 420px 340px;
+      gap: 6px;
+    }
+    .p1 { grid-column: span 7; }
+    .p2 { grid-column: span 5; }
+    .p3 { grid-column: span 4; }
+    .p4 { grid-column: span 5; }
+    .p5 { grid-column: span 3; }
+    @media (max-width: 900px) {
+      .port-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+      .p1,.p2,.p3,.p4,.p5 { grid-column: span 1; height: 240px; }
+    }
+    @media (max-width: 600px) {
+      .port-grid { grid-template-columns: 1fr; }
+      .p1,.p2,.p3,.p4,.p5 { grid-column: span 1; height: 220px; }
+    }
+
+    .port-item {
+      position: relative; overflow: hidden; cursor: pointer;
+    }
+    .port-item img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform .7s cubic-bezier(.16,1,.3,1), filter .5s;
+      filter: grayscale(25%);
+    }
+    .port-item:hover img { transform: scale(1.06); filter: grayscale(0%); }
+    .port-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(12,12,10,.9) 0%, transparent 55%);
+      opacity: 0; transition: opacity .4s;
+      display: flex; flex-direction: column; justify-content: flex-end;
+      padding: 24px 26px;
+    }
+    .port-item:hover .port-overlay { opacity: 1; }
+    .port-cat {
+      font-size: .68rem; font-weight: 600; letter-spacing: .18em;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 4px;
+    }
+    .port-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.3rem; letter-spacing: .06em;
+      color: var(--text-light); line-height: 1;
+    }
+
+    /* ══════════════════════════════════════════════
+       POR QUÉ PACIFICA
+    ══════════════════════════════════════════════ */
+    #porque { background: var(--coal); }
+    .porque-grid {
+      display: grid; grid-template-columns: repeat(3,1fr);
+      border: 1px solid var(--border-dim); gap: 1px; background: var(--border-dim);
+    }
+    @media (max-width: 900px) { .porque-grid { grid-template-columns: repeat(2,1fr); } }
+    @media (max-width: 560px) { .porque-grid { grid-template-columns: 1fr; } }
+    .p-cell {
+      background: var(--coal); padding: 44px 36px;
+      transition: background .4s;
+    }
+    .p-cell:hover { background: var(--coal-3); }
+    .p-cell-icon {
+      width: 42px; height: 42px;
+      border: 1px solid var(--border-amber);
+      display: flex; align-items: center; justify-content: center; margin-bottom: 22px;
+    }
+    .p-cell-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.35rem; letter-spacing: .05em;
+      color: var(--text-light); margin-bottom: 10px;
+    }
+    .p-cell-body { font-size: .84rem; font-weight: 300; line-height: 1.65; color: var(--text-muted); }
+
+    /* ══════════════════════════════════════════════
+       CONTACTO
+    ══════════════════════════════════════════════ */
+    #contacto { background: var(--cream); }
+    .contact-grid {
+      display: grid; grid-template-columns: 1fr 1.1fr; gap: 88px; align-items: start;
+    }
+    @media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; gap: 48px; } }
+
+    .ci-row {
+      display: flex; gap: 16px; padding: 18px 0;
+      border-bottom: 1px solid rgba(12,12,10,.08);
+    }
+    .ci-row:last-of-type { border-bottom: none; }
+    .ci-icon {
+      width: 38px; height: 38px; background: var(--amber);
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .ci-lbl { font-size: .68rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: #8A8278; margin-bottom: 2px; }
+    .ci-val { font-size: .95rem; font-weight: 500; color: var(--coal); }
+
+    .quote-block {
+      margin-top: 44px; padding: 26px 28px 26px 32px;
+      background: var(--coal); position: relative; overflow: hidden;
+    }
+    .quote-block::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--amber); }
+    .quote-text {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.1rem; letter-spacing: .05em; line-height: 1.45;
+      color: var(--text-light); margin-bottom: 14px;
+    }
+    .quote-attr { font-size: .72rem; font-weight: 600; letter-spacing: .15em; text-transform: uppercase; color: var(--amber); }
+
+    .form-wrap { background: var(--coal); padding: 52px 44px; }
+    @media (max-width: 600px) { .form-wrap { padding: 36px 24px; } }
+    .form-head-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.6rem; letter-spacing: .05em; color: var(--text-light);
+      margin-bottom: 4px;
+    }
+    .form-head-sub { font-size: .82rem; font-weight: 300; color: var(--text-muted); margin-bottom: 32px; }
+    .f-lbl {
+      display: block; font-size: .68rem; font-weight: 600;
+      letter-spacing: .18em; text-transform: uppercase;
+      color: var(--text-muted); margin-bottom: 7px;
+    }
+    .f-input {
+      width: 100%; padding: 13px 16px;
+      background: rgba(240,235,227,.04);
+      border: 1px solid rgba(240,235,227,.1);
+      color: var(--text-light);
+      font-family: 'Barlow', sans-serif; font-size: .92rem; font-weight: 300;
+      outline: none;
+      transition: border-color .3s, background .3s;
+      -webkit-appearance: none;
+    }
+    .f-input::placeholder { color: rgba(240,235,227,.2); }
+    .f-input:focus {
+      border-color: rgba(232,134,42,.5);
+      background: rgba(232,134,42,.04);
+    }
+    textarea.f-input { resize: vertical; min-height: 120px; }
+    .f-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    @media (max-width: 600px) { .f-row-2 { grid-template-columns: 1fr; } }
+    .f-group { margin-bottom: 20px; }
+    .f-submit {
+      width: 100%; padding: 15px;
+      background: var(--amber); color: var(--coal);
+      font-family: 'Barlow', sans-serif; font-size: .82rem; font-weight: 700;
+      letter-spacing: .14em; text-transform: uppercase;
+      border: none; cursor: pointer;
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      transition: background .25s, transform .2s;
+      margin-top: 8px;
+    }
+    .f-submit:hover { background: var(--gold); transform: translateY(-1px); }
+    .f-success {
+      display: none; margin-top: 14px; padding: 13px;
+      border: 1px solid var(--border-amber); background: var(--amber-dim);
+      text-align: center; font-size: .82rem; font-weight: 500;
+      letter-spacing: .06em; color: var(--amber);
+    }
+
+    /* ══════════════════════════════════════════════
+       FOOTER
+    ══════════════════════════════════════════════ */
+    #footer { background: var(--coal-2); }
+    .footer-inner {
+      padding: 72px 56px 24px;
+      display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 56px;
+      border-bottom: 1px solid var(--border-dim);
+      margin-bottom: 0;
+    }
+    @media (max-width: 900px)  { .footer-inner { grid-template-columns: 1fr 1fr; padding: 56px 24px 32px; } }
+    @media (max-width: 540px)  { .footer-inner { grid-template-columns: 1fr; } }
+    .footer-logo-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.6rem; letter-spacing: .08em;
+      color: var(--text-light); margin-bottom: 12px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .footer-mark {
+      width: 26px; height: 26px; background: var(--amber);
+      clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    }
+    .footer-desc { font-size: .84rem; font-weight: 300; line-height: 1.65; color: var(--text-muted); max-width: 230px; }
+    .footer-socials { display: flex; gap: 10px; margin-top: 22px; }
+    .f-social {
+      width: 34px; height: 34px;
+      border: 1px solid rgba(240,235,227,.1);
+      display: flex; align-items: center; justify-content: center;
+      transition: border-color .25s, background .25s;
+    }
+    .f-social:hover { border-color: var(--amber); background: var(--amber-dim); }
+    .f-col-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: .9rem; letter-spacing: .14em;
+      color: var(--amber); margin-bottom: 18px;
+    }
+    .f-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .f-links a { font-size: .84rem; font-weight: 300; color: var(--text-muted); text-decoration: none; transition: color .25s; }
+    .f-links a:hover { color: var(--text-light); }
+    .footer-bottom {
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 10px;
+      padding: 18px 56px;
+    }
+    @media (max-width: 540px) { .footer-bottom { padding: 18px 24px; } }
+    .f-copy { font-size: .75rem; font-weight: 300; color: rgba(144,136,128,.5); }
+  </style>
+</head>
+<body>
+
+<!-- ╔══════════════════════════════════════╗
+     ║  NAVBAR                              ║
+     ╚══════════════════════════════════════╝ -->
+<nav id="navbar">
+  <a href="#inicio" class="nav-logo">
+    <div class="nav-logo-mark"></div>
+    <span class="nav-logo-text">Pacifica Constructora</span>
+  </a>
+
+  <div class="nav-links">
+    <a href="#nosotros"      class="nav-link">Nosotros</a>
+    <a href="#servicios"     class="nav-link">Servicios</a>
+    <a href="#mantenimiento" class="nav-link">Facility</a>
+    <a href="#portafolio"    class="nav-link">Proyectos</a>
+    <a href="#contacto"      class="nav-link">Contacto</a>
+  </div>
+
+  <a href="#contacto" class="nav-cta nav-cta-desk">Iniciar proyecto</a>
+  <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile menu -->
+<div id="mob-menu">
+  <a href="#nosotros"      onclick="closeMob()">Nosotros</a>
+  <a href="#servicios"     onclick="closeMob()">Servicios</a>
+  <a href="#mantenimiento" onclick="closeMob()">Facility</a>
+  <a href="#portafolio"    onclick="closeMob()">Proyectos</a>
+  <a href="#contacto"      onclick="closeMob()" style="color:var(--amber)">Contacto →</a>
+</div>
+
+
+<!-- ╔══════════════════════════════════════╗
+     ║  HERO                                ║
+     ╚══════════════════════════════════════╝ -->
+<section id="inicio">
+  <div id="hero">
+    <div class="hero-bg"></div>
+
+    <div class="hero-content wrap">
+      <div class="hero-eyebrow sr">
+        <div class="hero-eyebrow-line"></div>
+        <span class="hero-eyebrow-text">Tijuana · Ensenada · Baja California</span>
+      </div>
+
+      <h1 class="hero-title sr d1">
+        CONSTRUIDO<br/>
+        CON <span class="amber-word">PROPÓSITO.</span>
+      </h1>
+
+      <div class="hero-foot">
+        <p class="hero-sub sr d2">
+          Soluciones integrales de construcción end-to-end — desde la planeación estratégica hasta la operación y mantenimiento de sus instalaciones. Calidad, cumplimiento y relaciones de largo plazo.
+        </p>
+        <div class="hero-actions sr d3">
+          <a href="#contacto" class="btn-amber">
+            Iniciar proyecto
+            <svg width="16" height="16" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="9" x2="15" y2="9"/><polyline points="10 4 15 9 10 14"/></svg>
+          </a>
+          <a href="#servicios" class="btn-outline">Ver servicios</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-cue">
+      <div class="scroll-cue-line"></div>
+      <span>Scroll</span>
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <div id="stats-bar">
+    <div class="wrap stats-inner">
+      <div class="stat-cell sr d1">
+        <div class="stat-num"><span class="ctr" data-t="8">0</span>+ Años</div>
+        <div class="stat-lbl">Operando en Baja California</div>
+      </div>
+      <div class="stat-cell sr d2">
+        <div class="stat-num"><span class="ctr" data-t="120">0</span>+</div>
+        <div class="stat-lbl">Proyectos entregados</div>
+      </div>
+      <div class="stat-cell sr d3">
+        <div class="stat-num"><span class="ctr" data-t="3">0</span> Fases</div>
+        <div class="stat-lbl">Planeación · Obra · Mantenimiento</div>
+      </div>
+      <div class="stat-cell sr d4">
+        <div class="stat-num"><span class="ctr" data-t="98">0</span>%</div>
+        <div class="stat-lbl">Índice de satisfacción</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ╔══════════════════════════════════════╗
+     ║  NOSOTROS                            ║
+     ╚══════════════════════════════════════╝ -->
+<section id="nosotros" class="noise">
+  <div class="py-sec px-main wrap" style="position:relative;z-index:1;">
+    <div class="about-grid">
+
+      <!-- Image -->
+      <div class="about-img-wrap sr-left">
+        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&q=85&auto=format&fit=crop"
+             alt="Equipo Pacifica Constructora en obra" class="about-img"/>
+        <div class="about-badge">
+          <div class="b-num">BC</div>
+          <div class="b-lbl">Baja California</div>
+        </div>
+      </div>
+
+      <!-- Text -->
+      <div class="sr-right">
+        <div class="eyebrow"><span class="t-label">Nuestra historia</span></div>
+        <h2 class="f-display t-section" style="color:var(--coal);margin-bottom:22px;">
+          UNA VISIÓN.<br/>UNA EMPRESA.<br/>UNA PROMESA.
+        </h2>
+        <p style="color:#5A5650;font-size:.97rem;font-weight:300;line-height:1.8;margin-bottom:14px;">
+          Pacifica nació de la convicción de una sola persona: que Baja California merece una constructora que no sacrifique calidad por velocidad, ni cercanía por crecimiento. Desde el primer proyecto, nuestra filosofía ha sido simple — hacer las cosas bien, siempre.
+        </p>
+        <p style="color:#5A5650;font-size:.97rem;font-weight:300;line-height:1.8;margin-bottom:40px;">
+          Operamos en Tijuana y Ensenada atendiendo clientes comerciales, corporativos, retail, hospitalidad y residencial. Cada obra lleva el mismo nivel de atención que el fundador puso en la primera. Eso no cambia.
+        </p>
+
+        <div class="amber-bar" style="margin-bottom:32px;"></div>
+
+        <div class="value-row">
+          <div class="v-num">01</div>
+          <div>
+            <div class="v-title">Calidad sin compromisos</div>
+            <div class="v-body">Materiales certificados y procesos rigurosos en cada fase. No existe "suficientemente bueno" en nuestro vocabulario.</div>
+          </div>
+        </div>
+        <div class="value-row">
+          <div class="v-num">02</div>
+          <div>
+            <div class="v-title">Puntualidad y cumplimiento</div>
+            <div class="v-body">Las fechas de entrega son compromisos, no estimados. Tu cronograma es nuestro cronograma.</div>
+          </div>
+        </div>
+        <div class="value-row">
+          <div class="v-num">03</div>
+          <div>
+            <div class="v-title">Cercanía y trato humano</div>
+            <div class="v-body">Acceso directo a quien toma decisiones. Sin intermediarios, sin demoras, con respeto en cada interacción.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ╔══════════════════════════════════════╗
+     ║  MARQUEE STRIP                       ║
+     ╚══════════════════════════════════════╝ -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <!-- 2× for seamless loop -->
+    <div class="m-item"><span class="m-text">PLANEACIÓN DE PROYECTOS</span><div class="m-dot"></div></div>
+    <div class="m-item"><span class="m-text">CONSTRUCCIÓN Y GESTIÓN DE OBRA</span><div class="m-dot"></div></div>
+    <div class="m-item"><span class="m-text">FACILITY SERVICES</span><div class="m-dot"></div></div>
+    <div class="m-item"><span class="m-text">DESIGN-BUILD</span><div class="m-dot"></div></div>
+    <div class="m-item"><span class="m-text">TIJUANA · ENSENADA</span><div class="m-dot"></div></div>
+    <div class="m-item"><span class="m-text">END-TO-END</span><div class="m-dot"></div></div>
+    <div class="m-item"><span class="m-text">PLANEACIÓN DE PROYECTOS</span><div class="m-dot"></div></div>
+    <div class="m-item"><span class="m-text">CONSTRUCCIÓN Y GESTIÓN DE OBRA</span><div class="m-dot"></div></div>
+    <div class="m-item"><span class="m-text">FACILITY SERVICES</span><div class="m-dot"></div></div>
+    <div class="m-item"><span class="m-text">DESIGN-BUILD</span><div class="m-dot"></div></div>
+    <div class="m-item"><span class="m-text">TIJUANA · ENSENADA</span><div class="m-dot"></div></div>
+    <div class="m-item"><span class="m-text">END-TO-END</span><div class="m-dot"></div></div>
+  </div>
+</div>
+
+
+<!-- ╔══════════════════════════════════════╗
+     ║  SERVICIOS — 3 BLOQUES               ║
+     ╚══════════════════════════════════════╝ -->
+<section id="servicios" class="py-sec">
+  <div class="wrap px-main">
+
+    <!-- Header -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:end;margin-bottom:72px;" class="svc-hdr">
+      <div>
+        <div class="eyebrow sr"><span class="t-label">Lo que hacemos</span></div>
+        <h2 class="f-display t-section section-title-light sr d1">
+          TRES FASES.<br/>UN ESTÁNDAR.
+        </h2>
+      </div>
+      <p class="sr d2" style="color:var(--text-dim);font-size:.95rem;font-weight:300;line-height:1.75;align-self:end;">
+        Acompañamos a nuestros clientes desde la idea inicial hasta la operación continua de sus instalaciones. Un socio de construcción integral para proyectos que no admiten errores.
+      </p>
+    </div>
+
+    <!-- ── BLOQUE 1: Planeación ── -->
+    <div class="service-block sr">
+      <div class="service-block-left">
+        <div>
+          <div class="service-tag">Pre-Construcción</div>
+          <h3 class="f-display service-title">
+            PLANEACIÓN<br/>DE PROYECTOS
+          </h3>
+        </div>
+        <div>
+          <div class="service-objective">Objetivo</div>
+          <p class="service-obj-text">
+            Garantizar que cada proyecto sea viable, eficiente y rentable antes de iniciar la construcción — con análisis técnico, financiero y estratégico de alto nivel.
+          </p>
+        </div>
+        <div class="service-big-num">01</div>
+      </div>
+      <div class="service-block-right">
+        <div class="svc-feature">
+          <div class="svc-feature-title">Estudios de factibilidad</div>
+          <div class="svc-feature-desc">Análisis técnico del sitio para validar viabilidad antes de comprometer recursos.</div>
+        </div>
+        <div class="svc-feature">
+          <div class="svc-feature-title">Modelo Design-Build</div>
+          <div class="svc-feature-desc">Diseño y construcción integrados bajo un solo equipo responsable del resultado.</div>
+        </div>
+        <div class="svc-feature">
+          <div class="svc-feature-title">Análisis técnico y financiero</div>
+          <div class="svc-feature-desc">Evaluación de rentabilidad, flujos de inversión y escenarios de riesgo.</div>
+        </div>
+        <div class="svc-feature">
+          <div class="svc-feature-title">Presupuestos detallados</div>
+          <div class="svc-feature-desc">Desglose ítem por ítem para decisiones informadas y sin sorpresas.</div>
+        </div>
+        <div class="svc-feature">
+          <div class="svc-feature-title">Cronogramas estratégicos</div>
+          <div class="svc-feature-desc">Planeación de fases, hitos críticos y rutas de contingencia.</div>
+        </div>
+        <div class="svc-feature">
+          <div class="svc-feature-title">Due diligence y riesgos</div>
+          <div class="svc-feature-desc">Identificación y mitigación de riesgos legales, técnicos y regulatorios.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── BLOQUE 2: Construcción ── -->
+    <div class="service-block sr d1">
+      <div class="service-block-left">
+        <div>
+          <div class="service-tag">Ejecución</div>
+          <h3 class="f-display service-title">
+            CONSTRUCCIÓN<br/>Y GESTIÓN<br/>DE OBRA
+          </h3>
+        </div>
+        <div>
+          <div class="service-objective">Objetivo</div>
+          <p class="service-obj-text">
+            Ejecutar proyectos de construcción cumpliendo tiempos, presupuesto y estándares de calidad — desde obra nueva hasta renovaciones complejas.
+          </p>
+        </div>
+        <div class="service-big-num">02</div>
+      </div>
+      <div class="service-block-right">
+        <div class="svc-feature">
+          <div class="svc-feature-title">Construcción nueva</div>
+          <div class="svc-feature-desc">Obra civil y estructural desde cimentación hasta entrega de llaves.</div>
+        </div>
+        <div class="svc-feature">
+          <div class="svc-feature-title">Remodelaciones y renovaciones</div>
+          <div class="svc-feature-desc">Transformación de espacios existentes minimizando tiempos de inactividad.</div>
+        </div>
+        <div class="svc-feature">
+          <div class="svc-feature-title">Expansiones de instalaciones</div>
+          <div class="svc-feature-desc">Ampliación de espacios operativos sin interrumpir la operación actual.</div>
+        </div>
+        <div class="svc-feature">
+          <div class="svc-feature-title">Capital improvements</div>
+          <div class="svc-feature-desc">Mejoras que incrementan el valor, eficiencia y vida útil de tus activos.</div>
+        </div>
+        <div class="svc-feature">
+          <div class="svc-feature-title">Construction management</div>
+          <div class="svc-feature-desc">Supervisión integral de calidad, tiempos y costos en cada fase de obra.</div>
+        </div>
+        <div class="svc-feature">
+          <div class="svc-feature-title">Coordinación de contratistas</div>
+          <div class="svc-feature-desc">Gestión centralizada de proveedores y subcontratistas bajo nuestros estándares.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── BLOQUE 3: Facility Services ── -->
+    <div class="service-block sr d2">
+      <div class="service-block-left">
+        <div>
+          <div class="service-tag">Post-Obra</div>
+          <h3 class="f-display service-title">
+            FACILITY<br/>SERVICES
+          </h3>
+        </div>
+        <div>
+          <div class="service-objective">Objetivo</div>
+          <p class="service-obj-text">
+            Asegurar el funcionamiento óptimo de sus instalaciones a largo plazo — con soporte preventivo, correctivo y atención de emergencias de respuesta inmediata.
+          </p>
+        </div>
+        <div class="service-big-num">03</div>
+      </div>
+      <div class="service-block-right">
+        <div class="svc-feature">
+          <div class="svc-feature-title">Mantenimiento preventivo</div>
+          <div class="svc-feature-desc">Diagnóstico semestral de estructuras e instalaciones críticas para anticipar fallas.</div>
+        </div>
+        <div class="svc-feature">
+          <div class="svc-feature-title">Mantenimiento correctivo</div>
+          <div class="svc-feature-desc">Intervenciones programadas para reparaciones de desgaste natural y acabados.</div>
+        </div>
+        <div class="svc-feature">
+          <div class="svc-feature-title">Retrofits y actualizaciones</div>
+          <div class="svc-feature-desc">Modernización de sistemas MEP, acabados y tecnología de instalaciones.</div>
+        </div>
+        <div class="svc-feature">
+          <div class="svc-feature-title">Rollouts multisede</div>
+          <div class="svc-feature-desc">Implementación de mejoras o adecuaciones simultáneas en múltiples ubicaciones.</div>
+        </div>
+        <div class="svc-feature">
+          <div class="svc-feature-title">Atención de emergencias</div>
+          <div class="svc-feature-desc">Respuesta prioritaria 24h para plomería, electricidad, cerrajería y recuperación ante desastres.</div>
+        </div>
+        <div class="svc-feature">
+          <div class="svc-feature-title">Soporte operativo continuo</div>
+          <div class="svc-feature-desc">Presencia permanente para proyectos menores, adecuaciones y soporte del día a día.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <style>@media(max-width:768px){.svc-hdr{grid-template-columns:1fr!important;}}</style>
+</section>
+
+
+<!-- ╔══════════════════════════════════════╗
+     ║  FACILITY SERVICES DETALLE           ║
+     ╚══════════════════════════════════════╝ -->
+<section id="mantenimiento" class="py-sec">
+  <div class="wrap px-main">
+
+    <div class="maint-header-grid">
+      <div>
+        <div class="eyebrow sr"><span class="t-label">Facility Services</span></div>
+        <h2 class="f-display t-section" style="color:var(--text-light); margin-bottom:0;" class="sr d1">
+          PROACTIVOS,<br/>NO REACTIVOS.
+        </h2>
+      </div>
+      <p class="sr d2" style="color:var(--text-dim);font-size:.95rem;font-weight:300;line-height:1.75;align-self:end;">
+        Un programa de mantenimiento bien diseñado no es un costo — es la inversión más rentable que puede hacer sobre sus instalaciones. Detectamos problemas antes de que se conviertan en crisis.
+      </p>
+    </div>
+
+    <div class="maint-grid sr">
+
+      <div class="maint-card">
+        <div class="maint-badge">Semestral</div>
+        <div class="maint-bg-num">01</div>
+        <div class="maint-card-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div class="maint-card-title">Diagnóstico Preventivo</div>
+        <p class="maint-card-desc">Evaluación exhaustiva de estructuras e instalaciones críticas cada 6 meses. Informe técnico detallado con plan de acción priorizado.</p>
+        <div class="maint-tags">
+          <span class="maint-tag">Revisión estructural</span>
+          <span class="maint-tag">Informe técnico</span>
+          <span class="maint-tag">Plan de acción</span>
+        </div>
+      </div>
+
+      <div class="maint-card">
+        <div class="maint-badge">2 veces al año</div>
+        <div class="maint-bg-num">02</div>
+        <div class="maint-card-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="1.6" stroke-linecap="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <div class="maint-card-title">Servicios Correctivos</div>
+        <p class="maint-card-desc">Dos intervenciones mayores anuales para reparaciones programadas: pintura, ajustes en carpintería, acabados y desgaste natural.</p>
+        <div class="maint-tags">
+          <span class="maint-tag">2 visitas al año</span>
+          <span class="maint-tag">Mano de obra calificada</span>
+        </div>
+      </div>
+
+      <div class="maint-card">
+        <div class="maint-badge">Respuesta 24h</div>
+        <div class="maint-bg-num">03</div>
+        <div class="maint-card-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="1.6" stroke-linecap="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <div class="maint-card-title">Atención de Urgencias</div>
+        <p class="maint-card-desc">Respuesta prioritaria para incidentes críticos y recuperación ante desastres. Disponibles cuando más nos necesita, sin tiempos de espera.</p>
+        <div class="maint-tags">
+          <span class="maint-tag">Plomería</span>
+          <span class="maint-tag">Electricidad</span>
+          <span class="maint-tag">Cerrajería</span>
+          <span class="maint-tag">Emergencias</span>
+        </div>
+      </div>
+
+      <div class="maint-card">
+        <div class="maint-badge">Continuo</div>
+        <div class="maint-bg-num">04</div>
+        <div class="maint-card-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="1.6" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <div class="maint-card-title">Soporte Operativo</div>
+        <p class="maint-card-desc">Proyectos menores, adecuaciones, rollouts multisede y limpieza especializada industrial. Soporte continuo para mantener sus instalaciones en óptimas condiciones.</p>
+        <div class="maint-tags">
+          <span class="maint-tag">Proyectos menores</span>
+          <span class="maint-tag">Rollouts</span>
+          <span class="maint-tag">Limpieza industrial</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ╔══════════════════════════════════════╗
+     ║  PORTAFOLIO                          ║
+     ╚══════════════════════════════════════╝ -->
+<section id="portafolio" class="py-sec">
+  <div class="wrap px-main">
+    <div class="port-header">
+      <div>
+        <div class="eyebrow sr"><span class="t-label">Proyectos</span></div>
+        <h2 class="f-display t-section" style="color:var(--coal);" class="sr d1">
+          EL TRABAJO<br/>HABLA SOLO.
+        </h2>
+      </div>
+      <div class="sr d2" style="align-self:end;">
+        <p style="color:#5A5650;font-size:.95rem;font-weight:300;line-height:1.75;margin-bottom:22px;">Cada proyecto en nuestro portafolio refleja el compromiso de entrega que prometemos desde el día uno. Residencial, comercial, corporativo y hospitalidad en toda Baja California.</p>
+        <a href="#contacto" class="btn-amber">
+          Platiquemos su proyecto
+          <svg width="15" height="15" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="9" x2="15" y2="9"/><polyline points="10 4 15 9 10 14"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding:0 56px;">
+    <div class="port-grid sr">
+      <div class="port-item p1">
+        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1000&q=85&auto=format&fit=crop" alt="Residencia Serrana"/>
+        <div class="port-overlay"><div class="port-cat">Residencial · Tijuana</div><div class="port-name">RESIDENCIA SERRANA</div></div>
+      </div>
+      <div class="port-item p2">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=700&q=85&auto=format&fit=crop" alt="Corporativo"/>
+        <div class="port-overlay"><div class="port-cat">Corporativo · Tijuana</div><div class="port-name">SUITE EJECUTIVA ZONA RÍO</div></div>
+      </div>
+      <div class="port-item p3">
+        <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600&q=85&auto=format&fit=crop" alt="Villa Ensenada"/>
+        <div class="port-overlay"><div class="port-cat">Residencial · Ensenada</div><div class="port-name">VILLA DEL PACÍFICO</div></div>
+      </div>
+      <div class="port-item p4">
+        <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=85&auto=format&fit=crop" alt="Casa premium"/>
+        <div class="port-overlay"><div class="port-cat">Residencial · Tijuana</div><div class="port-name">CASA CAÑÓN</div></div>
+      </div>
+      <div class="port-item p5">
+        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=500&q=85&auto=format&fit=crop" alt="Plaza comercial"/>
+        <div class="port-overlay"><div class="port-cat">Comercial · Ensenada</div><div class="port-name">PLAZA PUERTO</div></div>
+      </div>
+    </div>
+  </div>
+
+  <style>@media(max-width:768px){#portafolio .wrap:last-child{padding:0 24px!important;}}</style>
+</section>
+
+
+<!-- ╔══════════════════════════════════════╗
+     ║  POR QUÉ PACIFICA                    ║
+     ╚══════════════════════════════════════╝ -->
+<section id="porque" class="py-sec">
+  <div class="wrap px-main">
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:end;margin-bottom:64px;" class="pq-hdr">
+      <div>
+        <div class="eyebrow sr"><span class="t-label">Nuestro diferencial</span></div>
+        <h2 class="f-display t-section" style="color:var(--text-light);" class="sr d1">
+          ¿POR QUÉ<br/>PACIFICA?
+        </h2>
+      </div>
+      <p class="sr d2" style="color:var(--text-dim);font-size:.95rem;font-weight:300;line-height:1.75;align-self:end;">
+        En Baja California hay constructoras. Pacifica es diferente — no por lo que decimos, sino por cómo operamos cada día y entregamos cada obra.
+      </p>
+    </div>
+    <style>@media(max-width:768px){.pq-hdr{grid-template-columns:1fr!important;}}</style>
+
+    <div class="porque-grid sr d1">
+      <div class="p-cell">
+        <div class="p-cell-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="1.6" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div class="p-cell-title">GARANTÍA ESTRUCTURAL</div>
+        <p class="p-cell-body">Respaldamos cada obra más allá de la entrega. Tu inversión está protegida con garantía total sobre estructura e instalaciones.</p>
+      </div>
+      <div class="p-cell">
+        <div class="p-cell-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <div class="p-cell-title">ENTREGA PUNTUAL</div>
+        <p class="p-cell-body">Los cronogramas son compromisos, no estimados. Nuestro historial en BC respalda cada fecha que prometemos.</p>
+      </div>
+      <div class="p-cell">
+        <div class="p-cell-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="1.6" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <div class="p-cell-title">EQUIPO MULTIDISCIPLINARIO</div>
+        <p class="p-cell-body">Arquitectos, ingenieros, project managers y personal técnico certificado — todos bajo el mismo techo y los mismos estándares.</p>
+      </div>
+      <div class="p-cell">
+        <div class="p-cell-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="1.6" stroke-linecap="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+        <div class="p-cell-title">PRESUPUESTO TRANSPARENTE</div>
+        <p class="p-cell-body">Desglose detallado desde el día uno. Sin costos ocultos, sin sorpresas al cierre. Lo que cotizamos es lo que se paga.</p>
+      </div>
+      <div class="p-cell">
+        <div class="p-cell-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="1.6" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <div class="p-cell-title">COMUNICACIÓN DIRECTA</div>
+        <p class="p-cell-body">Acceso al liderazgo en cada etapa del proyecto. Sin capas que distorsionen tu visión o demoren decisiones críticas.</p>
+      </div>
+      <div class="p-cell">
+        <div class="p-cell-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="1.6" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div>
+        <div class="p-cell-title">RAÍCES EN BAJA CALIFORNIA</div>
+        <p class="p-cell-body">Conocemos el terreno, la regulación y el mercado local. Somos el socio constructor que BC necesita para proyectos que duran.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ╔══════════════════════════════════════╗
+     ║  CONTACTO                            ║
+     ╚══════════════════════════════════════╝ -->
+<section id="contacto" class="py-sec">
+  <div class="wrap px-main">
+    <div class="contact-grid">
+
+      <!-- Info -->
+      <div class="sr-left">
+        <div class="eyebrow"><span class="t-label">Hablemos</span></div>
+        <h2 class="f-display t-section" style="color:var(--coal);margin-bottom:22px;">
+          ¿TIENES UN<br/>PROYECTO<br/>EN MENTE?
+        </h2>
+        <p style="color:#5A5650;font-size:.97rem;font-weight:300;line-height:1.8;margin-bottom:44px;">
+          Cuéntenos su visión sin compromisos. Nuestro equipo responde con una propuesta técnica honesta y un presupuesto detallado. Así de directo.
+        </p>
+
+        <div class="ci-row">
+          <div class="ci-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="var(--coal)" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.53A2 2 0 0 1 3.6 1.37h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div><div class="ci-lbl">Teléfono</div><div class="ci-val">+52 (664) 123-4567</div></div>
+        </div>
+        <div class="ci-row">
+          <div class="ci-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="var(--coal)" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div><div class="ci-lbl">Email</div><div class="ci-val">contacto@pacificabc.mx</div></div>
+        </div>
+        <div class="ci-row">
+          <div class="ci-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="var(--coal)" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><div class="ci-lbl">Cobertura</div><div class="ci-val">Tijuana y Ensenada, BC</div></div>
+        </div>
+
+        <div class="quote-block">
+          <div class="quote-text">"CONSTRUIR BIEN NO ES UNA OPCIÓN — ES LA ÚNICA FORMA QUE CONOCEMOS."</div>
+          <div class="quote-attr">— Fundador, Pacifica Constructora</div>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="form-wrap sr-right">
+        <div class="form-head-title">CUÉNTENOS SU PROYECTO</div>
+        <div class="form-head-sub">Respondemos en menos de 24 horas hábiles.</div>
+
+        <form onsubmit="handleForm(event)">
+          <div class="f-row-2">
+            <div class="f-group">
+              <label class="f-lbl">Nombre</label>
+              <input type="text" class="f-input" placeholder="Su nombre" required/>
+            </div>
+            <div class="f-group">
+              <label class="f-lbl">Teléfono</label>
+              <input type="tel" class="f-input" placeholder="+52 664 000 0000"/>
+            </div>
+          </div>
+          <div class="f-group">
+            <label class="f-lbl">Correo electrónico</label>
+            <input type="email" class="f-input" placeholder="correo@empresa.com" required/>
+          </div>
+          <div class="f-group">
+            <label class="f-lbl">Tipo de proyecto</label>
+            <select class="f-input" style="color:rgba(240,235,227,.6);cursor:pointer;">
+              <option value="" disabled selected>Seleccione una opción</option>
+              <option>Planeación / Pre-construcción</option>
+              <option>Construcción nueva</option>
+              <option>Remodelación / Renovación</option>
+              <option>Facility Services / Mantenimiento</option>
+              <option>Otro</option>
+            </select>
+          </div>
+          <div class="f-group">
+            <label class="f-lbl">Describa su proyecto</label>
+            <textarea class="f-input" placeholder="Tipo de obra, ubicación, alcance aproximado y cualquier detalle relevante..."></textarea>
+          </div>
+          <button type="submit" id="f-btn" class="f-submit">
+            Enviar mensaje
+            <svg width="15" height="15" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="9" x2="15" y2="9"/><polyline points="10 4 15 9 10 14"/></svg>
+          </button>
+          <div class="f-success" id="f-ok">✓ Mensaje recibido — le contactamos pronto.</div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ╔══════════════════════════════════════╗
+     ║  FOOTER                              ║
+     ╚══════════════════════════════════════╝ -->
+<footer id="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo-name">
+        <div class="footer-mark"></div>
+        Pacifica Constructora
+      </div>
+      <p class="footer-desc">Construido con propósito. Soluciones integrales end-to-end en Baja California desde hace más de 8 años.</p>
+      <div class="footer-socials">
+        <a href="#" class="f-social" aria-label="Instagram">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" stroke-width="1.8" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="var(--text-muted)" stroke="none"/></svg>
+        </a>
+        <a href="#" class="f-social" aria-label="Facebook">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" stroke-width="1.8" stroke-linecap="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="#" class="f-social" aria-label="LinkedIn">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" stroke-width="1.8" stroke-linecap="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="#" class="f-social" aria-label="WhatsApp">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" stroke-width="1.8" stroke-linecap="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div>
+      <div class="f-col-title">Servicios</div>
+      <ul class="f-links">
+        <li><a href="#servicios">Planeación de Proyectos</a></li>
+        <li><a href="#servicios">Construcción y Gestión de Obra</a></li>
+        <li><a href="#servicios">Facility Services</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="f-col-title">Empresa</div>
+      <ul class="f-links">
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#portafolio">Proyectos</a></li>
+        <li><a href="#porque">Por qué Pacifica</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="f-col-title">Contacto</div>
+      <ul class="f-links">
+        <li><a href="tel:+526641234567">+52 (664) 123-4567</a></li>
+        <li><a href="mailto:contacto@pacificabc.mx">contacto@pacificabc.mx</a></li>
+        <li style="color:var(--text-muted);font-size:.84rem;font-weight:300;margin-top:4px;">Tijuana, Baja California</li>
+        <li style="color:var(--text-muted);font-size:.84rem;font-weight:300;">Ensenada, Baja California</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="f-copy">© 2025 Pacifica Constructora. Todos los derechos reservados.</span>
+    <span class="f-copy" style="color:rgba(144,136,128,.35);letter-spacing:.1em;">CONSTRUIDO CON PROPÓSITO.</span>
+  </div>
+</footer>
+
+
+<!-- ╔══════════════════════════════════════╗
+     ║  JAVASCRIPT                          ║
+     ╚══════════════════════════════════════╝ -->
+<script>
+  /* Navbar scroll */
+  const nav = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  }, { passive: true });
+
+  /* Hamburger */
+  const burger = document.getElementById('hamburger');
+  const mob    = document.getElementById('mob-menu');
+  burger.addEventListener('click', () => {
+    mob.classList.toggle('open');
+    const o = mob.classList.contains('open');
+    document.body.style.overflow = o ? 'hidden' : '';
+    const spans = burger.querySelectorAll('span');
+    spans[0].style.transform = o ? 'rotate(45deg) translate(5px,5px)' : '';
+    spans[1].style.opacity   = o ? '0' : '1';
+    spans[2].style.transform = o ? 'rotate(-45deg) translate(5px,-5px)' : '';
+  });
+  function closeMob() {
+    mob.classList.remove('open');
+    document.body.style.overflow = '';
+    burger.querySelectorAll('span').forEach(s => { s.style.transform = ''; s.style.opacity = '1'; });
+  }
+
+  /* Scroll reveal */
+  const ro = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('vis'); });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  document.querySelectorAll('.sr, .sr-left, .sr-right').forEach(el => ro.observe(el));
+
+  /* Counter animation */
+  function runCounter(el) {
+    const t = +el.dataset.t, dur = 1800;
+    let cur = 0;
+    const step = t / (dur / 16);
+    const id = setInterval(() => {
+      cur = Math.min(cur + step, t);
+      el.textContent = Math.floor(cur);
+      if (cur >= t) clearInterval(id);
+    }, 16);
+  }
+  const co = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { runCounter(e.target); co.unobserve(e.target); } });
+  }, { threshold: 0.6 });
+  document.querySelectorAll('.ctr').forEach(el => co.observe(el));
+
+  /* Form */
+  function handleForm(e) {
+    e.preventDefault();
+    const btn = document.getElementById('f-btn');
+    const ok  = document.getElementById('f-ok');
+    btn.textContent = 'Enviando...';
+    btn.style.opacity = '.55';
+    btn.disabled = true;
+    setTimeout(() => {
+      btn.style.display = 'none';
+      ok.style.display = 'block';
+    }, 1400);
+  }
+</script>
+
+</body>
+</html>
