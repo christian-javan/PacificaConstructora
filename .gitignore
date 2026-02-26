@@ -50,3 +50,4 @@ desktop.ini
 .env
 .env.*
 !.env.example
+synthradev.html
