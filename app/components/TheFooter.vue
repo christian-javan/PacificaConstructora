@@ -2,9 +2,9 @@
   <footer id="footer">
     <div class="footer-inner">
       <div class="footer-brand-col">
-        <a href="#inicio" class="footer-logo-link">
+        <NuxtLink to="/" class="footer-logo-link">
           <img src="/imagenes/pacifica-construccion-y-mantenimiento-logo.webp" alt="Pacifica Constructora Logo" class="footer-logo-img" />
-        </a>
+        </NuxtLink>
         <p class="footer-desc">Construido con propósito. Soluciones integrales end-to-end en Baja California desde hace más de 8 años.</p>
         <div class="footer-socials">
           <a href="#" class="f-social" aria-label="Instagram">
@@ -24,18 +24,22 @@
       <div>
         <div class="f-col-title">Servicios</div>
         <ul class="f-links">
-          <li><a href="#servicios">Planeación de Proyectos</a></li>
-          <li><a href="#servicios">Construcción y Gestión de Obra</a></li>
-          <li><a href="#servicios">Facility Services</a></li>
+          <li><NuxtLink to="/diseno">Diseño Arquitectónico</NuxtLink></li>
+          <li><NuxtLink to="/construccion">Construcción</NuxtLink></li>
+          <li><NuxtLink to="/acabados">Acabados Premium</NuxtLink></li>
+          <li><NuxtLink to="/plan-blindaje">Plan Blindaje</NuxtLink></li>
+          <li><NuxtLink to="/bienes-raices">Bienes Raíces</NuxtLink></li>
+          <li><NuxtLink to="/venta-de-propiedades">Venta Propiedades</NuxtLink></li>
+          <li><NuxtLink to="/asesoria-financiamiento-construccion">Financiamiento</NuxtLink></li>
         </ul>
       </div>
       <div>
         <div class="f-col-title">Empresa</div>
         <ul class="f-links">
-          <li><a href="#nosotros">Nosotros</a></li>
-          <li><a href="#portafolio">Proyectos</a></li>
-          <li><a href="#porque">Por qué Pacifica</a></li>
-          <li><a href="#contacto">Contacto</a></li>
+          <li><NuxtLink to="/#nosotros">Nosotros</NuxtLink></li>
+          <li><NuxtLink to="/#portafolio">Proyectos</NuxtLink></li>
+          <li><NuxtLink to="/#porque">Por qué Pacifica</NuxtLink></li>
+          <li><NuxtLink to="/#contacto">Contacto</NuxtLink></li>
         </ul>
       </div>
       <div>

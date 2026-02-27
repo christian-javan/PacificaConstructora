@@ -37,7 +37,7 @@ Todo requerimiento que exceda estas características se considerará "Trabajo Ad
 
 **TERCERA.- ENTREGABLES**
 EL PROVEEDOR se compromete a entregar a EL CLIENTE:
-1. El código fuente completo y los archivos del Sitio Web en su versión final.
+1. El código fuente completo y los archivos del Sitio Web en su versión final, los cuales serán entregados en su totalidad dentro de una memoria USB física.
 2. Accesos al panel de administración del proveedor de alojamiento (Hosting) y gestor de dominios.
 3. Documentación básica de uso o manual operativo si estuviera estipulado en la cotización inicial.
 
@@ -91,7 +91,9 @@ EL PROVEEDOR no es responsable por fallas ocasionadas por servidores de terceros
 El costo de este Contrato NO incluye el mantenimiento técnico, actualizaciones periódicas de software, o gestión de contenidos posterior a la entrega y liberación de garantía. Si EL CLIENTE requiere mantenimiento continuo, ambas partes deberán firmar un anexo o póliza de mantenimiento independiente con una iguala mensual/anual previamente acordada.
 
 **DÉCIMA QUINTA.- TERMINACIÓN ANTICIPADA**
-Cualquiera de las partes podrá dar por terminado este Contrato de manera anticipada en caso de incumplimiento grave de la contraparte, debiendo notificarlo por escrito con **[NÚMERO]** días de anticipación. En caso de terminación anticipada por causas imputables a EL CLIENTE, las cantidades pagadas previamente a EL PROVEEDOR no serán reembolsadas.
+Cualquiera de las partes podrá dar por terminado este Contrato en cualquier momento y por cualquier motivo, debiendo notificarlo por escrito con **[NÚMERO]** días de anticipación.
+
+Al momento de la terminación de la relación comercial, sin importar la causa, EL PROVEEDOR se obliga de manera garantizada y sin ningún pretexto o condición, a devolver y transferir el control absoluto y la propiedad del dominio web a favor de EL CLIENTE. En caso de terminación anticipada por causas imputables a EL CLIENTE, las cantidades pagadas previamente a EL PROVEEDOR no serán reembolsadas.
 
 **DÉCIMA SEXTA.- JURISDICCIÓN Y LEYES APLICABLES**
 Para la interpretación, cumplimiento y todo lo relacionado con el presente Contrato, las partes acuerdan someterse expresamente a las Leyes Civiles y Mercantiles vigentes en los Estados Unidos Mexicanos y a la jurisdicción de los tribunales competentes en la ciudad de **[CIUDAD, ESTADO]**, renunciando al fuero que por razón de sus domicilios presentes o futuros pudiera corresponderles.

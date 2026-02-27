@@ -1,19 +1,20 @@
 <template>
   <nav id="navbar" ref="navbarRef">
-    <a href="#inicio" class="nav-logo">
+    <NuxtLink to="/" class="nav-logo">
       <img src="/imagenes/pacifica-construccion-y-mantenimiento-logo-header.webp" alt="Pacifica Constructora Logo" class="nav-logo-img" />
-    </a>
+    </NuxtLink>
 
     <div class="nav-links">
-      <a href="#nosotros"      class="nav-link">Nosotros</a>
-      <a href="#servicios"     class="nav-link">Servicios</a>
-      <a href="#mantenimiento" class="nav-link">Facility</a>
-      <a href="#blindaje"      class="nav-link">Plan Blindaje</a>
-      <a href="#portafolio"    class="nav-link">Proyectos</a>
-      <a href="#contacto"      class="nav-link">Contacto</a>
+      <NuxtLink to="/diseno" class="nav-link">Diseño</NuxtLink>
+      <NuxtLink to="/construccion" class="nav-link">Construcción</NuxtLink>
+      <NuxtLink to="/acabados" class="nav-link">Acabados</NuxtLink>
+      <NuxtLink to="/bienes-raices" class="nav-link">Bienes Raíces</NuxtLink>
+      <NuxtLink to="/venta-de-propiedades" class="nav-link">Propiedades</NuxtLink>
+      <NuxtLink to="/plan-blindaje" class="nav-link">Plan Blindaje</NuxtLink>
+      <NuxtLink to="/asesoria-financiamiento-construccion" class="nav-link">Asesoría</NuxtLink>
     </div>
 
-    <a href="#contacto" class="nav-cta nav-cta-desk">Iniciar proyecto</a>
+    <NuxtLink to="/#contacto" class="nav-cta nav-cta-desk">Iniciar proyecto</NuxtLink>
     <button class="hamburger" id="hamburger" aria-label="Abrir menú" @click="toggleMob">
       <span ref="s1"></span>
       <span ref="s2"></span>
@@ -23,12 +24,14 @@
 
   <!-- Mobile menu -->
   <div id="mob-menu" :class="{ open: mobOpen }">
-    <a href="#nosotros"      @click="closeMob">Nosotros</a>
-    <a href="#servicios"     @click="closeMob">Servicios</a>
-    <a href="#mantenimiento" @click="closeMob">Facility</a>
-    <a href="#blindaje"      @click="closeMob">Plan Blindaje</a>
-    <a href="#portafolio"    @click="closeMob">Proyectos</a>
-    <a href="#contacto"      @click="closeMob" style="color:var(--amber)">Contacto →</a>
+    <NuxtLink to="/diseno" @click="closeMob">Diseño</NuxtLink>
+    <NuxtLink to="/construccion" @click="closeMob">Construcción</NuxtLink>
+    <NuxtLink to="/acabados" @click="closeMob">Acabados</NuxtLink>
+    <NuxtLink to="/bienes-raices" @click="closeMob">Bienes Raíces</NuxtLink>
+    <NuxtLink to="/venta-de-propiedades" @click="closeMob">Propiedades</NuxtLink>
+    <NuxtLink to="/plan-blindaje" @click="closeMob">Plan Blindaje</NuxtLink>
+    <NuxtLink to="/asesoria-financiamiento-construccion" @click="closeMob">Asesoría</NuxtLink>
+    <NuxtLink to="/#contacto" @click="closeMob" style="color:var(--amber)">Contacto →</NuxtLink>
   </div>
 </template>
 

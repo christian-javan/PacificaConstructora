@@ -1,6 +1,5 @@
 <template>
   <div>
-    <TheNavbar />
     <SectionHero />
     <SectionNosotros />
     <TheMarquee />
@@ -10,7 +9,6 @@
     <SectionPortafolio />
     <SectionPorque />
     <SectionContacto />
-    <TheFooter />
   </div>
 </template>
 
