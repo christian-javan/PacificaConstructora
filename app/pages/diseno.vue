@@ -230,7 +230,7 @@ definePageMeta({
 })
 
 useHead({
-  title: 'Diseño Arquitectónico — Pacifica Constructora',
+  title: 'Diseño Arquitectónico — Pacifica Construcción y Mantenimiento',
   meta: [
     { name: 'description', content: 'Servicios de diseño arquitectónico, conceptualización y desarrollo ejecutivo en Baja California. Arquitectura con visión estratégica para proyectos residenciales, comerciales e industriales.' }
   ]

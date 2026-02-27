@@ -1,6 +1,6 @@
 # CONTRATO DE PRESTACIÓN DE SERVICIOS DE DESARROLLO WEB
 
-Conste por el presente documento, el **CONTRATO DE PRESTACIÓN DE SERVICIOS DE DESARROLLO WEB** (en adelante, el "Contrato"), que celebran por una parte **[NOMBRE COMPLETO O RAZÓN SOCIAL DEL PROVEEDOR]**, a quien en lo sucesivo se le denominará "EL PROVEEDOR", y por la otra parte **[NOMBRE COMPLETO O RAZÓN SOCIAL DEL CLIENTE EJ. PACIFICA CONSTRUCTORA]**, a quien en lo sucesivo se le denominará "EL CLIENTE"; al tenor de las siguientes Declaraciones y Cláusulas:
+Conste por el presente documento, el **CONTRATO DE PRESTACIÓN DE SERVICIOS DE DESARROLLO WEB** (en adelante, el "Contrato"), que celebran por una parte **[NOMBRE COMPLETO O RAZÓN SOCIAL DEL PROVEEDOR]**, a quien en lo sucesivo se le denominará "EL PROVEEDOR", y por la otra parte **[NOMBRE COMPLETO O RAZÓN SOCIAL DEL CLIENTE EJ. Pacifica Construcción y Mantenimiento]**, a quien en lo sucesivo se le denominará "EL CLIENTE"; al tenor de las siguientes Declaraciones y Cláusulas:
 
 ---
 

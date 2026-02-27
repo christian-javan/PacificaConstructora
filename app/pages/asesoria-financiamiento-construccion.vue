@@ -129,7 +129,7 @@
 import { onMounted } from 'vue'
 definePageMeta({ layout: 'page' })
 useHead({
-  title: 'Asesoría en Financiamiento — Pacifica Constructora',
+  title: 'Asesoría en Financiamiento — Pacifica Construcción y Mantenimiento',
   meta: [{ name: 'description', content: 'Asesoría en financiamiento de construcción en Baja California. Créditos constructor, estructuración financiera y vinculación con instituciones. Tijuana y Ensenada.' }]
 })
 onMounted(() => {

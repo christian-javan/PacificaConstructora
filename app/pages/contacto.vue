@@ -15,7 +15,7 @@ definePageMeta({
 })
 
 useHead({
-  title: 'Contacto — Pacifica Constructora',
+  title: 'Contacto — Pacifica Construcción y Mantenimiento',
   meta: [
     { name: 'description', content: 'Contáctenos para iniciar su proyecto de construcción, diseño arquitectónico o mantenimiento corporativo en Baja California.' }
   ]

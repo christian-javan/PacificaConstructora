@@ -196,7 +196,7 @@ definePageMeta({
 })
 
 useHead({
-  title: 'Bienes Raíces — Pacifica Constructora',
+  title: 'Bienes Raíces — Pacifica Construcción y Mantenimiento',
   meta: [
     { name: 'description', content: 'Desarrollo inmobiliario y gestión de activos en Baja California. Oportunidades de inversión respaldadas por experiencia constructiva real en Tijuana y Ensenada.' }
   ]

@@ -28,7 +28,7 @@
 
           <div class="quote-block">
             <div class="quote-text">"CONSTRUIR BIEN NO ES UNA OPCIÓN — ES LA ÚNICA FORMA QUE CONOCEMOS."</div>
-            <div class="quote-attr">— Fundador, Pacifica Constructora</div>
+            <div class="quote-attr">— Fundador, Pacifica Construcción y Mantenimiento</div>
           </div>
         </div>
 

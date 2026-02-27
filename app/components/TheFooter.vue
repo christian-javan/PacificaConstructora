@@ -3,7 +3,7 @@
     <div class="footer-inner">
       <div class="footer-brand-col">
         <NuxtLink to="/" class="footer-logo-link">
-          <img src="/imagenes/pacifica-construccion-y-mantenimiento-logo.webp" alt="Pacifica Constructora Logo" class="footer-logo-img" />
+          <img src="/imagenes/pacifica-construccion-y-mantenimiento-logo.webp" alt="Pacifica Construcción y Mantenimiento Logo" class="footer-logo-img" />
         </NuxtLink>
         <p class="footer-desc">Construido con propósito. Soluciones integrales end-to-end en Baja California desde hace más de 8 años.</p>
         <div class="footer-socials">
@@ -53,7 +53,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span class="f-copy">© 2025 Pacifica Constructora. Todos los derechos reservados.</span>
+      <span class="f-copy">© 2025 Pacifica Construcción y Mantenimiento. Todos los derechos reservados.</span>
       <span class="f-copy" style="color:rgba(144,136,128,.35);letter-spacing:.1em;">CONSTRUIDO CON PROPÓSITO.</span>
     </div>
   </footer>

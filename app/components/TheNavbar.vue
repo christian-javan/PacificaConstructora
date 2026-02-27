@@ -1,7 +1,7 @@
 <template>
   <nav id="navbar" ref="navbarRef">
     <NuxtLink to="/" class="nav-logo">
-      <img src="/imagenes/pacifica-construccion-y-mantenimiento-logo-header.webp" alt="Pacifica Constructora Logo" class="nav-logo-img" />
+      <img src="/imagenes/pacifica-construccion-y-mantenimiento-logo-header.webp" alt="Pacifica Construcción y Mantenimiento Logo" class="nav-logo-img" />
     </NuxtLink>
 
     <div class="nav-links">

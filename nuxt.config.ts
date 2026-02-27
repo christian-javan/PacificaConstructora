@@ -24,13 +24,13 @@ export default defineNuxtConfig({
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { property: 'og:title', content: 'Pacifica Constructora | Construido con propósito' },
+        { property: 'og:title', content: 'Pacifica Construcción y Mantenimiento | Construido con propósito' },
         { property: 'og:description', content: 'Soluciones integrales de construcción en Tijuana y Baja California. Planeación, obra y mantenimiento de instalaciones.' },
         { property: 'og:image', content: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=80&auto=format&fit=crop' },
         { property: 'og:url', content: 'https://pacificaconstruccion.com' },
         { property: 'og:type', content: 'website' },
         { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:title', content: 'Pacifica Constructora | Construido con propósito' },
+        { name: 'twitter:title', content: 'Pacifica Construcción y Mantenimiento | Construido con propósito' },
         { name: 'twitter:description', content: 'Soluciones integrales de construcción en Tijuana y Baja California. Planeación, obra y mantenimiento de instalaciones.' },
         { name: 'twitter:image', content: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=80&auto=format&fit=crop' }
       ],

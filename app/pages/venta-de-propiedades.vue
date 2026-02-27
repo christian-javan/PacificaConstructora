@@ -223,7 +223,7 @@ definePageMeta({
 })
 
 useHead({
-  title: 'Venta de Propiedades — Pacifica Constructora',
+  title: 'Venta de Propiedades — Pacifica Construcción y Mantenimiento',
   meta: [
     { name: 'description', content: 'Comercialización profesional de propiedades en Baja California. Marketing inmobiliario, negociación experta y acompañamiento legal hasta escrituración. Tijuana y Ensenada.' }
   ]

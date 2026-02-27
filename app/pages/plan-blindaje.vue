@@ -97,7 +97,7 @@
 import { onMounted } from 'vue'
 definePageMeta({ layout: 'page' })
 useHead({
-  title: 'Plan Blindaje — Pacifica Constructora',
+  title: 'Plan Blindaje — Pacifica Construcción y Mantenimiento',
   meta: [{ name: 'description', content: 'Plan de protección integral anual para instalaciones en Baja California. Diagnóstico preventivo, correctivos, urgencias y limpieza especializada.' }]
 })
 onMounted(() => {

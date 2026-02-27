@@ -196,7 +196,7 @@ definePageMeta({
 })
 
 useHead({
-  title: 'Acabados Premium — Pacifica Constructora',
+  title: 'Acabados Premium — Pacifica Construcción y Mantenimiento',
   meta: [
     { name: 'description', content: 'Acabados de alta calidad para proyectos residenciales, comerciales e industriales en Baja California. Materiales premium, carpintería fina y personalización total.' }
   ]

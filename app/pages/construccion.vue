@@ -258,7 +258,7 @@ definePageMeta({
 })
 
 useHead({
-  title: 'Construcción — Pacifica Constructora',
+  title: 'Construcción — Pacifica Construcción y Mantenimiento',
   meta: [
     { name: 'description', content: 'Ejecución de obra civil e industrial en Baja California. Construcción nueva, remodelaciones y gestión integral de proyectos con garantía estructural. Tijuana y Ensenada.' }
   ]

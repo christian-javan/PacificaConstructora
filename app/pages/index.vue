@@ -16,7 +16,7 @@
 import { onMounted } from 'vue'
 
 useHead({
-  title: 'Pacifica Constructora — Construido con propósito.',
+  title: 'Pacifica Construcción y Mantenimiento — Construido con propósito.',
   meta: [
     { name: 'description', content: 'Soluciones integrales de construcción en Baja California. Planeación, obra y mantenimiento de instalaciones. Tijuana y Ensenada.' }
   ]
