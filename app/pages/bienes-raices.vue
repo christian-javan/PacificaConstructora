@@ -19,10 +19,10 @@
               Identificamos, desarrollamos y gestionamos activos inmobiliarios con visión estratégica. Oportunidades reales de inversión respaldadas por nuestra experiencia constructiva en Baja California.
             </p>
             <div class="hero-actions sr d3">
-              <a href="#contacto-bienes" class="btn-amber">
+              <NuxtLink to="/contacto" class="btn-amber">
                 Explorar oportunidades
                 <svg width="16" height="16" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="9" x2="15" y2="9"/><polyline points="10 4 15 9 10 14"/></svg>
-              </a>
+              </NuxtLink>
               <a href="#servicios-bienes" class="btn-outline">Nuestros servicios</a>
             </div>
           </div>
@@ -176,11 +176,11 @@
           Conozca nuestras oportunidades de inversión inmobiliaria en Baja California. Le presentamos opciones alineadas a su perfil y objetivos financieros.
         </p>
         <div class="sr d3" style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
-          <a href="/#contacto" class="btn-amber">
+          <NuxtLink to="/contacto" class="btn-amber">
             Explorar inversiones
             <svg width="16" height="16" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="9" x2="15" y2="9"/><polyline points="10 4 15 9 10 14"/></svg>
-          </a>
-          <a href="/" class="btn-outline" style="color:var(--coal);border-color:rgba(12,12,10,.22);">Volver al inicio</a>
+          </NuxtLink>
+          <NuxtLink to="/" class="btn-outline" style="color:var(--coal);border-color:rgba(12,12,10,.22);">Volver al inicio</NuxtLink>
         </div>
       </div>
     </section>

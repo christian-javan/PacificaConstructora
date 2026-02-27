@@ -42,10 +42,12 @@
             Un solo plan cubre diagnóstico, correctivos, urgencias y limpieza especializada. Usted se enfoca en su negocio — nosotros en sus instalaciones.
           </p>
 
-          <a href="#contacto" class="btn-amber blindaje-cta">
-            Contratar Plan Blindaje
-            <svg width="15" height="15" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="9" x2="15" y2="9"/><polyline points="10 4 15 9 10 14"/></svg>
-          </a>
+          <div class="sr text-center mt-xl">
+            <NuxtLink to="/contacto" class="btn-amber blindaje-cta">
+              Proteger mis instalaciones
+              <svg width="16" height="16" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="9" x2="15" y2="9"/><polyline points="10 4 15 9 10 14"/></svg>
+            </NuxtLink>
+          </div>
 
           <p class="blindaje-fine">Contrato anual renovable · Baja California</p>
         </div>

@@ -9,7 +9,7 @@
           <div class="hero-foot">
             <p class="hero-sub sr d2">Su instalación merece más que reaccionar a problemas — merece que nunca ocurran. Plan Blindaje es nuestro programa de protección integral anual.</p>
             <div class="hero-actions sr d3">
-              <a href="#contacto-blindaje" class="btn-amber">Contratar Blindaje <svg width="16" height="16" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="9" x2="15" y2="9"/><polyline points="10 4 15 9 10 14"/></svg></a>
+              <NuxtLink to="/contacto" class="btn-amber">Contratar Blindaje <svg width="16" height="16" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="9" x2="15" y2="9"/><polyline points="10 4 15 9 10 14"/></svg></NuxtLink>
               <a href="#que-incluye" class="btn-outline">Qué incluye</a>
             </div>
           </div>
@@ -85,8 +85,8 @@
         <h2 class="f-display t-section sr d1" style="color:var(--coal);margin-bottom:22px;">BLINDE SU<br/>INSTALACIÓN.</h2>
         <p class="sr d2" style="color:#5A5650;font-size:.97rem;font-weight:300;line-height:1.8;margin-bottom:40px;">Contáctenos para recibir una propuesta personalizada de Plan Blindaje adaptada a sus instalaciones. Contrato anual renovable.</p>
         <div class="sr d3" style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
-          <a href="/#contacto" class="btn-amber">Contratar Plan Blindaje <svg width="16" height="16" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="9" x2="15" y2="9"/><polyline points="10 4 15 9 10 14"/></svg></a>
-          <a href="/" class="btn-outline" style="color:var(--coal);border-color:rgba(12,12,10,.22);">Volver al inicio</a>
+          <NuxtLink to="/contacto" class="btn-amber">Contratar Plan Blindaje <svg width="16" height="16" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="9" x2="15" y2="9"/><polyline points="10 4 15 9 10 14"/></svg></NuxtLink>
+          <NuxtLink to="/" class="btn-outline" style="color:var(--coal);border-color:rgba(12,12,10,.22);">Volver al inicio</NuxtLink>
         </div>
       </div>
     </section>

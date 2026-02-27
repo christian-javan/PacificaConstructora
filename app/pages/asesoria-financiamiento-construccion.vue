@@ -9,7 +9,7 @@
           <div class="hero-foot">
             <p class="hero-sub sr d2">Estructuramos el financiamiento que su proyecto necesita. Conectamos su visión con las instituciones financieras adecuadas y armamos expedientes que se aprueban.</p>
             <div class="hero-actions sr d3">
-              <a href="#contacto-asesoria" class="btn-amber">Solicitar asesoría <svg width="16" height="16" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="9" x2="15" y2="9"/><polyline points="10 4 15 9 10 14"/></svg></a>
+              <NuxtLink to="/contacto" class="btn-amber">Solicitar asesoría <svg width="16" height="16" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="9" x2="15" y2="9"/><polyline points="10 4 15 9 10 14"/></svg></NuxtLink>
               <a href="#servicios-asesoria" class="btn-outline">Nuestros servicios</a>
             </div>
           </div>
@@ -117,8 +117,8 @@
         <h2 class="f-display t-section sr d1" style="color:var(--coal);margin-bottom:22px;">HAGAMOS VIABLE<br/>SU PROYECTO.</h2>
         <p class="sr d2" style="color:#5A5650;font-size:.97rem;font-weight:300;line-height:1.8;margin-bottom:40px;">Platíquenos sobre su proyecto y le orientamos sobre las mejores opciones de financiamiento disponibles para hacerlo realidad.</p>
         <div class="sr d3" style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
-          <a href="/#contacto" class="btn-amber">Solicitar asesoría <svg width="16" height="16" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="9" x2="15" y2="9"/><polyline points="10 4 15 9 10 14"/></svg></a>
-          <a href="/" class="btn-outline" style="color:var(--coal);border-color:rgba(12,12,10,.22);">Volver al inicio</a>
+          <NuxtLink to="/contacto" class="btn-amber">Solicitar asesoría <svg width="16" height="16" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="9" x2="15" y2="9"/><polyline points="10 4 15 9 10 14"/></svg></NuxtLink>
+          <NuxtLink to="/" class="btn-outline" style="color:var(--coal);border-color:rgba(12,12,10,.22);">Volver al inicio</NuxtLink>
         </div>
       </div>
     </section>

@@ -4,7 +4,7 @@
     <!-- HERO -->
     <section>
       <div id="hero" style="min-height:70vh;">
-        <div class="hero-bg" style="background-image:url('https://images.unsplash.com/photo-1582407947092-96be94433b73?w=2200&q=85&auto=format&fit=crop');background-position:center 40%;"></div>
+        <div class="hero-bg" style="background-image:url('https://images.unsplash.com/flagged/photo-1564767609342-620cb19b2357');background-position:center; background-size: cover;"></div>
         <div class="hero-content wrap">
           <div class="hero-eyebrow sr">
             <div class="hero-eyebrow-line"></div>
@@ -19,10 +19,10 @@
               Comercializamos propiedades con estrategia, marketing profesional y acompañamiento legal completo. Maximizamos el valor de su inmueble y aceleramos el cierre de cada operación.
             </p>
             <div class="hero-actions sr d3">
-              <a href="#contacto-venta" class="btn-amber">
+              <NuxtLink to="/contacto" class="btn-amber">
                 Vender mi propiedad
                 <svg width="16" height="16" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="9" x2="15" y2="9"/><polyline points="10 4 15 9 10 14"/></svg>
-              </a>
+              </NuxtLink>
               <a href="#proceso-venta" class="btn-outline">Cómo funciona</a>
             </div>
           </div>
@@ -203,11 +203,11 @@
           Solicite una valuación gratuita de su inmueble y conozca nuestra estrategia de comercialización personalizada. Sin compromisos.
         </p>
         <div class="sr d3" style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
-          <a href="/#contacto" class="btn-amber">
+          <NuxtLink to="/contacto" class="btn-amber">
             Solicitar valuación
             <svg width="16" height="16" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="9" x2="15" y2="9"/><polyline points="10 4 15 9 10 14"/></svg>
-          </a>
-          <a href="/" class="btn-outline" style="color:var(--coal);border-color:rgba(12,12,10,.22);">Volver al inicio</a>
+          </NuxtLink>
+          <NuxtLink to="/" class="btn-outline" style="color:var(--coal);border-color:rgba(12,12,10,.22);">Volver al inicio</NuxtLink>
         </div>
       </div>
     </section>

@@ -29,10 +29,10 @@
             Soluciones integrales de construcción end-to-end — desde la planeación estratégica hasta la operación y mantenimiento de sus instalaciones. Calidad, cumplimiento y relaciones de largo plazo.
           </p>
           <div class="hero-actions sr d3">
-            <a href="#contacto" class="btn-amber">
+            <NuxtLink to="/contacto" class="btn-amber">
               Iniciar proyecto
               <svg width="16" height="16" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="9" x2="15" y2="9"/><polyline points="10 4 15 9 10 14"/></svg>
-            </a>
+            </NuxtLink>
             <a href="#servicios" class="btn-outline">Ver servicios</a>
           </div>
         </div>

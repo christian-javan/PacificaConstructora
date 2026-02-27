@@ -8,12 +8,12 @@
             EL TRABAJO<br/>HABLA SOLO.
           </h2>
         </div>
-        <div class="sr d2" style="align-self:end;">
+        <div class="sr-right" style="align-self:end;text-align:right;">
           <p style="color:#5A5650;font-size:.95rem;font-weight:300;line-height:1.75;margin-bottom:22px;">Cada proyecto en nuestro portafolio refleja el compromiso de entrega que prometemos desde el día uno. Residencial, comercial, corporativo y hospitalidad en toda Baja California.</p>
-          <a href="#contacto" class="btn-amber">
-            Platiquemos su proyecto
-            <svg width="15" height="15" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="9" x2="15" y2="9"/><polyline points="10 4 15 9 10 14"/></svg>
-          </a>
+          <NuxtLink to="/contacto" class="btn-amber">
+            Iniciar proyecto
+            <svg width="16" height="16" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="9" x2="15" y2="9"/><polyline points="10 4 15 9 10 14"/></svg>
+          </NuxtLink>
         </div>
       </div>
     </div>

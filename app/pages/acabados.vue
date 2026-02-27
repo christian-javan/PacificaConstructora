@@ -19,10 +19,10 @@
               Los acabados definen la personalidad de un espacio. Trabajamos con materiales de primera línea y mano de obra especializada para que cada superficie comunique calidad y durabilidad.
             </p>
             <div class="hero-actions sr d3">
-              <a href="#contacto-acabados" class="btn-amber">
+              <NuxtLink to="/contacto" class="btn-amber">
                 Cotizar acabados
                 <svg width="16" height="16" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="9" x2="15" y2="9"/><polyline points="10 4 15 9 10 14"/></svg>
-              </a>
+              </NuxtLink>
               <a href="#tipos-acabados" class="btn-outline">Ver materiales</a>
             </div>
           </div>
@@ -176,11 +176,11 @@
           Cuéntenos sobre su proyecto y reciba una asesoría personalizada en selección de materiales y acabados. Sin compromisos, con presupuesto detallado.
         </p>
         <div class="sr d3" style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
-          <a href="/#contacto" class="btn-amber">
+          <NuxtLink to="/contacto" class="btn-amber">
             Solicitar asesoría
             <svg width="16" height="16" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="9" x2="15" y2="9"/><polyline points="10 4 15 9 10 14"/></svg>
-          </a>
-          <a href="/" class="btn-outline" style="color:var(--coal);border-color:rgba(12,12,10,.22);">Volver al inicio</a>
+          </NuxtLink>
+          <NuxtLink to="/" class="btn-outline" style="color:var(--coal);border-color:rgba(12,12,10,.22);">Volver al inicio</NuxtLink>
         </div>
       </div>
     </section>
