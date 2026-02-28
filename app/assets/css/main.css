@@ -47,6 +47,25 @@ body {
 }
 
 /* ══════════════════════════════════════════════
+   PUNTOS MASONES
+══════════════════════════════════════════════ */
+
+
+.mason-points circle {
+    transition: fill .3s ease;
+}
+
+/* Fondo oscuro → puntos claros */
+.mason-points.light circle {
+    fill: #F5F1EA;
+}
+
+/* Fondo claro → puntos oscuros */
+.mason-points.dark circle {
+    fill: #242421;
+}
+
+/* ══════════════════════════════════════════════
    TYPOGRAPHY SYSTEM
 ══════════════════════════════════════════════ */
 .f-display {
@@ -174,6 +193,37 @@ body {
     text-decoration: none;
     transition: color .25s;
     position: relative;
+}
+
+.nav-link-estrella {
+    font-family: 'Barlow', sans-serif;
+    font-size: .8rem;
+    color: var(--amber);
+    font-weight: 800;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color .25s;
+    position: relative;
+
+    animation: pulseStar 2.2s ease-in-out infinite;
+}
+
+@keyframes pulseStar {
+    0% {
+        transform: scale(1);
+        text-shadow: 0 0 0px var(--amber);
+    }
+
+    50% {
+        transform: scale(1.06);
+        text-shadow: 0 0 12px var(--amber);
+    }
+
+    100% {
+        transform: scale(1);
+        text-shadow: 0 0 0px var(--amber);
+    }
 }
 
 .nav-link::after {
@@ -1638,6 +1688,13 @@ textarea.f-input {
     padding: 18px 56px;
 }
 
+.fondo-planos {
+    background-color: #f5f1ea;
+    opacity: 1;
+    background-image: linear-gradient(#f4e5d9 2.2px, transparent 2.2px), linear-gradient(to right, #f4e5d9 2.2px, #f5f1ea 2.2px);
+    background-size: 44px 44px;
+}
+
 @media (max-width: 540px) {
     .footer-bottom {
         padding: 18px 24px;
@@ -1656,5 +1713,14 @@ textarea.f-input {
 @media (max-width: 900px) {
     .admin-grid {
         grid-template-columns: 1fr !important;
+    }
+
+    .resp-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .resp-grid>div:first-child {
+        border-right: none !important;
+        border-bottom: 1px solid var(--border-amber);
     }
 }

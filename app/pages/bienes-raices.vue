@@ -246,7 +246,7 @@
                 <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
               </svg></div>
             <div class="p-cell-title">MERCADO LOCAL</div>
-            <p class="p-cell-body">Presencia activa en Tijuana y Ensenada con conocimiento profundo de zonas,
+            <p class="p-cell-body">Presencia activa en Tijuana con conocimiento profundo de zonas,
               regulaciones y tendencias del mercado.</p>
           </div>
           <div class="p-cell">
@@ -323,7 +323,7 @@ definePageMeta({
 useHead({
   title: 'Bienes Raíces — Pacifica Construcción y Mantenimiento',
   meta: [
-    { name: 'description', content: 'Desarrollo inmobiliario y gestión de activos en Baja California. Oportunidades de inversión respaldadas por experiencia constructiva real en Tijuana y Ensenada.' }
+    { name: 'description', content: 'Desarrollo inmobiliario y gestión de activos en Baja California. Oportunidades de inversión respaldadas por experiencia constructiva real en Tijuana.' }
   ]
 })
 

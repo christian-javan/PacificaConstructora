@@ -176,7 +176,7 @@
     </section>
 
     <!-- REMODELACIONES -->
-    <section class="py-sec" style="background:var(--cream);">
+    <section class="py-sec fondo-planos">
       <div class="wrap px-main">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;" class="svc-hdr">
           <div>
@@ -317,7 +317,7 @@
                 <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
               </svg></div>
             <div class="p-cell-title">NORMATIVA LOCAL</div>
-            <p class="p-cell-body">Conocemos a fondo la regulación de Tijuana y Ensenada. Diseñamos conforme a normas
+            <p class="p-cell-body">Conocemos a fondo la regulación de Tijuana. Diseñamos conforme a normas
               vigentes desde el primer trazo.</p>
           </div>
         </div>
@@ -325,7 +325,7 @@
     </section>
 
     <!-- CTA -->
-    <section id="contacto-diseno" class="py-sec" style="background:var(--cream);">
+    <section id="contacto-diseno" class="py-sec fondo-planos">
       <div class="wrap px-main" style="text-align:center;max-width:720px;">
         <div class="eyebrow sr" style="justify-content:center;"><span class="t-label">Comencemos</span></div>
         <h2 class="f-display t-section sr d1" style="color:var(--coal);margin-bottom:22px;">

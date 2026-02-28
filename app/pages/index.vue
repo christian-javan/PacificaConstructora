@@ -1,11 +1,11 @@
 <template>
   <div>
     <SectionHero />
+    <SectionBlinaje />
     <SectionNosotros />
     <TheMarquee />
     <SectionServicios />
     <SectionFacility />
-    <SectionBlinaje />
     <SectionPortafolio />
     <SectionPorque />
     <SectionContacto />
@@ -18,7 +18,7 @@ import { onMounted } from 'vue'
 useHead({
   title: 'Pacifica Construcción y Mantenimiento — Construido con propósito.',
   meta: [
-    { name: 'description', content: 'Soluciones integrales de construcción en Baja California. Planeación, obra y mantenimiento de instalaciones. Tijuana y Ensenada.' }
+    { name: 'description', content: 'Soluciones integrales de construcción en Baja California. Planeación, obra y mantenimiento de instalaciones. Tijuana.' }
   ]
 })
 

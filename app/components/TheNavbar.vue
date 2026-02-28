@@ -9,9 +9,9 @@
       <NuxtLink to="/diseno" class="nav-link">Diseño</NuxtLink>
       <NuxtLink to="/construccion" class="nav-link">Construcción</NuxtLink>
       <NuxtLink to="/acabados" class="nav-link">Acabados</NuxtLink>
+      <NuxtLink to="/plan-blindaje" class="nav-link-estrella">Plan Blindaje</NuxtLink>
       <NuxtLink to="/bienes-raices" class="nav-link">Bienes Raíces</NuxtLink>
       <NuxtLink to="/venta-de-propiedades" class="nav-link">Propiedades</NuxtLink>
-      <NuxtLink to="/plan-blindaje" class="nav-link">Plan Blindaje</NuxtLink>
       <NuxtLink to="/servicios-limpieza" class="nav-link">Limpieza</NuxtLink>
       <NuxtLink to="/asesoria-financiamiento-construccion" class="nav-link">Asesoría</NuxtLink>
     </div>

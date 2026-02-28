@@ -238,6 +238,14 @@
       <div class="wrap px-main">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;" class="svc-hdr">
           <div>
+            <div class="sr d3" style="margin-top:48px;">
+              <div style="position:relative;overflow:hidden;border:1px solid var(--border-amber);">
+                <video autoplay muted loop playsinline
+                  style="width:100%;display:block;aspect-ratio:16/9;object-fit:cover;">
+                  <source src="/videos/construccion-ligera-570w.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
             <div class="eyebrow sr"><span class="t-label">Construcción Nueva</span></div>
             <h2 class="f-display t-section sr d1" style="color:var(--text-light);">
               CONSTRUCCIÓN<br />LIGERA.
@@ -300,6 +308,10 @@
             </div>
           </div>
         </div>
+
+        <!-- Video -->
+
+
       </div>
     </section>
 
@@ -638,7 +650,7 @@ definePageMeta({
 useHead({
   title: 'Construcción — Pacifica Construcción y Mantenimiento',
   meta: [
-    { name: 'description', content: 'Ejecución de obra civil e industrial en Baja California. Construcción nueva, remodelaciones y gestión integral de proyectos con garantía estructural. Tijuana y Ensenada.' }
+    { name: 'description', content: 'Ejecución de obra civil e industrial en Baja California. Construcción nueva, remodelaciones y gestión integral de proyectos con garantía estructural. Tijuana.' }
   ]
 })
 

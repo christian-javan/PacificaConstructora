@@ -122,47 +122,101 @@
       </div>
     </section>
 
-    <!-- RESPUESTA RÁPIDA -->
-    <section class="py-sec" style="background:var(--coal);">
-      <div class="wrap px-main">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;" class="svc-hdr">
-          <div>
-            <div class="eyebrow sr"><span class="t-label">Tranquilidad Total</span></div>
-            <h2 class="f-display t-section sr d1" style="color:var(--text-light);">
-              RESPUESTA<br />RÁPIDA EN<br />EMERGENCIAS.
-            </h2>
-            <p class="sr d2"
-              style="color:var(--text-dim);font-size:.97rem;font-weight:300;line-height:1.8;margin-top:22px;">
-              Las verdaderas emergencias no tienen horario. Te garantizamos un tiempo de respuesta máximo de <strong
-                style="font-weight:600;color:var(--text-light);">4 horas</strong> en situaciones críticas fuera de
-              horarios laborales.
-            </p>
-          </div>
-          <div class="sr d2">
-            <div style="background:var(--coal-3);padding:44px 40px;position:relative;overflow:hidden;">
-              <div style="position:absolute;top:0;left:0;width:3px;height:100%;background:var(--amber);"></div>
+    <!-- RESPUESTA RÁPIDA — 4 HORAS GARANTIZADAS -->
+    <section class="py-sec" style="background:var(--coal);position:relative;overflow:hidden;">
+      <!-- Big background text -->
+      <div
+        style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Bebas Neue',sans-serif;font-size:clamp(18rem,30vw,28rem);letter-spacing:.02em;color:rgba(232,134,42,.04);pointer-events:none;line-height:1;white-space:nowrap;">
+        4H</div>
+
+      <div class="wrap px-main" style="position:relative;z-index:1;">
+        <!-- Centered header -->
+        <div style="text-align:center;max-width:800px;margin:0 auto 48px;">
+          <div class="eyebrow sr" style="justify-content:center;"><span class="t-label">Tranquilidad Total ante
+              Emergencias</span></div>
+          <h2 class="f-display sr d1"
+            style="color:var(--text-light);font-size:clamp(3rem,7vw,6rem);line-height:.9;margin-bottom:24px;">
+            RESPUESTA EN<br /><span style="color:var(--amber);">4 HORAS.</span>
+          </h2>
+          <p class="sr d2" style="color:var(--text-dim);font-size:1.05rem;font-weight:300;line-height:1.8;">
+            Las verdaderas emergencias no tienen horario. No dejes que un imprevisto arruine tu fin de semana.
+          </p>
+        </div>
+
+        <!-- Highlight card -->
+        <div class="sr d2" style="max-width:900px;margin:0 auto;">
+          <div
+            style="border:2px solid var(--amber);background:linear-gradient(135deg,rgba(232,134,42,.08) 0%,rgba(12,12,10,.95) 100%);padding:0;position:relative;overflow:hidden;">
+            <!-- Glow effect -->
+            <div
+              style="position:absolute;top:-50%;right:-20%;width:400px;height:400px;background:radial-gradient(circle,rgba(232,134,42,.12) 0%,transparent 70%);pointer-events:none;">
+            </div>
+
+            <div style="display:grid;grid-template-columns:auto 1fr;gap:0;" class="resp-grid">
+              <!-- Left: Big number -->
               <div
-                style="font-family:'Bebas Neue',sans-serif;font-size:1.35rem;letter-spacing:.05em;color:var(--text-light);margin-bottom:20px;">
-                HORARIO DE RESPUESTA 4H</div>
-              <div style="display:flex;flex-direction:column;gap:16px;">
-                <div style="display:flex;gap:10px;align-items:center;">
-                  <div style="width:6px;height:6px;border-radius:50%;background:var(--amber);flex-shrink:0;"></div>
-                  <div style="font-size:1.05rem;font-weight:400;color:var(--text-light);">Después de las 5:00 p.m. entre
-                    semana</div>
+                style="padding:52px 48px;display:flex;flex-direction:column;align-items:center;justify-content:center;border-right:1px solid var(--border-amber);position:relative;">
+                <div
+                  style="font-family:'Bebas Neue',sans-serif;font-size:clamp(5rem,10vw,8rem);letter-spacing:.02em;line-height:.85;color:var(--amber);text-shadow:0 0 60px rgba(232,134,42,.3);">
+                  4H</div>
+                <div
+                  style="display:inline-flex;align-items:center;gap:8px;padding:8px 18px;background:var(--amber);margin-top:14px;">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--coal)" stroke-width="2.5"
+                    stroke-linecap="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                  </svg>
+                  <span
+                    style="font-family:'Barlow',sans-serif;font-size:.75rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--coal);">GARANTIZADO</span>
                 </div>
-                <div style="display:flex;gap:10px;align-items:center;">
-                  <div style="width:6px;height:6px;border-radius:50%;background:var(--amber);flex-shrink:0;"></div>
-                  <div style="font-size:1.05rem;font-weight:400;color:var(--text-light);">Viernes a partir del mediodía
+              </div>
+
+              <!-- Right: Details -->
+              <div style="padding:44px 48px;">
+                <div
+                  style="font-family:'Bebas Neue',sans-serif;font-size:1.6rem;letter-spacing:.05em;color:var(--text-light);margin-bottom:8px;">
+                  TIEMPO DE RESPUESTA MÁXIMO</div>
+                <p style="font-size:1rem;font-weight:300;line-height:1.7;color:var(--text-muted);margin-bottom:24px;">
+                  Te garantizamos atención en un máximo de <strong style="font-weight:600;color:var(--amber);">4
+                    horas</strong> en situaciones críticas fuera de horarios laborales.
+                </p>
+                <div style="display:flex;flex-direction:column;gap:14px;">
+                  <div style="display:flex;gap:10px;align-items:center;">
+                    <div
+                      style="width:8px;height:8px;border-radius:50%;background:var(--amber);flex-shrink:0;box-shadow:0 0 8px rgba(232,134,42,.5);">
+                    </div>
+                    <div style="font-size:1.05rem;font-weight:500;color:var(--text-light);">Después de las 5:00 p.m.
+                      entre semana</div>
                   </div>
-                </div>
-                <div style="display:flex;gap:10px;align-items:center;">
-                  <div style="width:6px;height:6px;border-radius:50%;background:var(--amber);flex-shrink:0;"></div>
-                  <div style="font-size:1.05rem;font-weight:400;color:var(--text-light);">Asistencia 24 horas sábados y
-                    domingos</div>
+                  <div style="display:flex;gap:10px;align-items:center;">
+                    <div
+                      style="width:8px;height:8px;border-radius:50%;background:var(--amber);flex-shrink:0;box-shadow:0 0 8px rgba(232,134,42,.5);">
+                    </div>
+                    <div style="font-size:1.05rem;font-weight:500;color:var(--text-light);">Viernes a partir del
+                      mediodía</div>
+                  </div>
+                  <div style="display:flex;gap:10px;align-items:center;">
+                    <div
+                      style="width:8px;height:8px;border-radius:50%;background:var(--amber);flex-shrink:0;box-shadow:0 0 8px rgba(232,134,42,.5);">
+                    </div>
+                    <div style="font-size:1.05rem;font-weight:500;color:var(--text-light);">Asistencia 24 horas sábados
+                      y domingos</div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+
+        <!-- CTA below -->
+        <div class="sr d3" style="text-align:center;margin-top:40px;">
+          <NuxtLink to="/contacto" class="btn-amber" style="font-size:1.1rem;padding:16px 36px;">
+            Contratar Plan Blindaje
+            <svg width="16" height="16" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round">
+              <line x1="3" y1="9" x2="15" y2="9" />
+              <polyline points="10 4 15 9 10 14" />
+            </svg>
+          </NuxtLink>
         </div>
       </div>
     </section>
@@ -198,7 +252,7 @@
                 <strong style="font-weight:600;color:var(--amber);">Nota:</strong> El tiempo de respuesta de 4 horas
                 aplica exclusivamente para emergencias fuera del horario hábil. De lunes a viernes, de 7:00 a.m. a 5:00
                 p.m., las solicitudes y servicios no urgentes se programan en agenda regular. Los fines de semana son
-                exclusivos para emergencias. Servicio no disponible en Ensenada.
+                exclusivos para emergencias.
               </div>
             </div>
           </div>

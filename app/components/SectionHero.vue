@@ -2,36 +2,33 @@
   <section id="inicio">
     <div id="hero">
       <!-- Video background -->
-      <video
-        class="hero-video"
-        src="/videos/output.webm"
-        autoplay
-        muted
-        loop
-        playsinline
-        preload="auto"
-      ></video>
+      <video class="hero-video" src="/videos/output.webm" autoplay muted loop playsinline preload="auto"></video>
       <div class="hero-video-overlay"></div>
 
       <div class="hero-content wrap">
         <div class="hero-eyebrow sr">
           <div class="hero-eyebrow-line"></div>
-          <span class="hero-eyebrow-text">Tijuana · Ensenada · Baja California</span>
+          <span class="hero-eyebrow-text">Tijuana · Baja California</span>
         </div>
 
         <h1 class="hero-title sr d1">
-          CONSTRUIDO<br/>
+          CONSTRUCCIÓN<br />
           CON <span class="amber-word">PROPÓSITO.</span>
         </h1>
 
         <div class="hero-foot">
           <p class="hero-sub sr d2">
-            Soluciones integrales de construcción end-to-end — desde la planeación estratégica hasta la operación y mantenimiento de sus instalaciones. Calidad, cumplimiento y relaciones de largo plazo.
+            Soluciones integrales de construcción end-to-end — desde la planeación estratégica hasta la operación y
+            mantenimiento de sus instalaciones. Calidad, cumplimiento y relaciones de largo plazo.
           </p>
           <div class="hero-actions sr d3">
             <NuxtLink to="/contacto" class="btn-amber">
               Iniciar proyecto
-              <svg width="16" height="16" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="9" x2="15" y2="9"/><polyline points="10 4 15 9 10 14"/></svg>
+              <svg width="16" height="16" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round">
+                <line x1="3" y1="9" x2="15" y2="9" />
+                <polyline points="10 4 15 9 10 14" />
+              </svg>
             </NuxtLink>
             <a href="#servicios" class="btn-outline">Ver servicios</a>
           </div>
@@ -108,12 +105,10 @@ onMounted(() => {
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(
-    165deg,
-    rgba(12,12,10,.28) 0%,
-    rgba(12,12,10,.18) 25%,
-    rgba(12,12,10,.65) 65%,
-    rgba(12,12,10,.98) 100%
-  );
+  background: linear-gradient(165deg,
+      rgba(12, 12, 10, .28) 0%,
+      rgba(12, 12, 10, .18) 25%,
+      rgba(12, 12, 10, .65) 65%,
+      rgba(12, 12, 10, .98) 100%);
 }
 </style>
