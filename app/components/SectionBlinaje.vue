@@ -1,5 +1,12 @@
 <template>
-  <section id="blindaje" class="py-sec blindaje-section">
+  <section id="blindaje" class="py-sec blindaje-section" style="position: relative;">
+    <!-- Discret mason pattern -->
+    <svg class="mason-points light" width="60" height="60" viewBox="0 0 100 100"
+      style="position: absolute; top: 60px; left: 40px; opacity: 0.1; pointer-events: none; z-index: 5;">
+      <circle cx="50" cy="25" r="6" />
+      <circle cx="28" cy="63" r="6" />
+      <circle cx="72" cy="63" r="6" />
+    </svg>
     <div class="wrap px-main">
 
       <!-- Header -->

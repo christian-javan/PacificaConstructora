@@ -1,5 +1,12 @@
 <template>
-  <section id="nosotros" class="noise">
+  <section id="nosotros" class="noise" style="position: relative;">
+    <!-- Discret mason pattern -->
+    <svg class="mason-points dark" width="60" height="60" viewBox="0 0 100 100"
+      style="position: absolute; top: 40px; right: 60px; opacity: 0.12; pointer-events: none; z-index: 5;">
+      <circle cx="50" cy="25" r="6" />
+      <circle cx="28" cy="63" r="6" />
+      <circle cx="72" cy="63" r="6" />
+    </svg>
     <div class="py-sec px-main wrap" style="position:relative;z-index:1;">
       <div class="about-grid">
 
