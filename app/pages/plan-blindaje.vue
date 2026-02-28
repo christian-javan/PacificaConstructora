@@ -27,7 +27,13 @@
     </section>
 
     <!-- PÓLIZA DE BLINDAJE -->
-    <section id="que-incluye" class="py-sec" style="background:var(--cream);">
+    <section id="que-incluye" class="py-sec" style="background:var(--cream);position:relative;">
+      <svg class="mason-points dark" width="60" height="60" viewBox="0 0 100 100"
+        style="position: absolute; top: 60px; left: 40px; opacity: 0.1; pointer-events: none; z-index: 5;">
+        <circle cx="50" cy="25" r="6" />
+        <circle cx="28" cy="63" r="6" />
+        <circle cx="72" cy="63" r="6" />
+      </svg>
       <div class="wrap px-main">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:end;margin-bottom:48px;"
           class="svc-hdr">
@@ -124,6 +130,12 @@
 
     <!-- RESPUESTA RÁPIDA — 4 HORAS GARANTIZADAS -->
     <section class="py-sec" style="background:var(--coal);position:relative;overflow:hidden;">
+      <svg class="mason-points light" width="60" height="60" viewBox="0 0 100 100"
+        style="position: absolute; top: 60px; right: 40px; opacity: 0.1; pointer-events: none; z-index: 5;">
+        <circle cx="50" cy="25" r="6" />
+        <circle cx="28" cy="63" r="6" />
+        <circle cx="72" cy="63" r="6" />
+      </svg>
       <!-- Big background text -->
       <div
         style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Bebas Neue',sans-serif;font-size:clamp(18rem,30vw,28rem);letter-spacing:.02em;color:rgba(232,134,42,.04);pointer-events:none;line-height:1;white-space:nowrap;">

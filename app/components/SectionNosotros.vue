@@ -12,8 +12,8 @@
 
         <!-- Image -->
         <div class="about-img-wrap sr-left">
-          <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&q=85&auto=format&fit=crop"
-            alt="Equipo Pacifica Construcción y Mantenimiento en obra" class="about-img" />
+          <img src="/imagenes/trabajadores-construccion.webp" alt="Equipo Pacifica Construcción y Mantenimiento en obra"
+            class="about-img" />
           <div class="about-badge">
             <div class="b-num">BC</div>
             <div class="b-lbl">Baja California</div>

@@ -5,7 +5,7 @@
     <section>
       <div id="hero" style="min-height:70vh;">
         <div class="hero-bg"
-          style="background-image:url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=2200&q=85&auto=format&fit=crop');background-position:center 50%;">
+          style="background-image:url('/imagenes/bienes-raices.webp');background-position:center 50%;">
         </div>
         <div class="hero-content wrap">
           <div class="hero-eyebrow sr">
@@ -38,7 +38,13 @@
     </section>
 
     <!-- SERVICIOS -->
-    <section id="servicios-bienes" class="py-sec" style="background:var(--coal);">
+    <section id="servicios-bienes" class="py-sec" style="background:var(--coal);position:relative;">
+      <svg class="mason-points light" width="60" height="60" viewBox="0 0 100 100"
+        style="position: absolute; top: 60px; right: 40px; opacity: 0.1; pointer-events: none; z-index: 5;">
+        <circle cx="50" cy="25" r="6" />
+        <circle cx="28" cy="63" r="6" />
+        <circle cx="72" cy="63" r="6" />
+      </svg>
       <div class="wrap px-main">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:end;margin-bottom:72px;"
           class="svc-hdr">
@@ -137,7 +143,13 @@
     </section>
 
     <!-- ASESORES DE VENTA -->
-    <section class="py-sec" style="background:var(--cream);">
+    <section class="py-sec" style="background:var(--cream);position:relative;">
+      <svg class="mason-points dark" width="60" height="60" viewBox="0 0 100 100"
+        style="position: absolute; top: 60px; left: 40px; opacity: 0.1; pointer-events: none; z-index: 5;">
+        <circle cx="50" cy="25" r="6" />
+        <circle cx="28" cy="63" r="6" />
+        <circle cx="72" cy="63" r="6" />
+      </svg>
       <div class="wrap px-main">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;" class="svc-hdr">
           <div>

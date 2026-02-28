@@ -38,7 +38,13 @@
     </section>
 
     <!-- TIPOS DE ACABADOS -->
-    <section id="tipos-acabados" class="py-sec" style="background:var(--coal);">
+    <section id="tipos-acabados" class="py-sec" style="background:var(--coal);position:relative;">
+      <svg class="mason-points light" width="60" height="60" viewBox="0 0 100 100"
+        style="position: absolute; top: 60px; right: 40px; opacity: 0.1; pointer-events: none; z-index: 5;">
+        <circle cx="50" cy="25" r="6" />
+        <circle cx="28" cy="63" r="6" />
+        <circle cx="72" cy="63" r="6" />
+      </svg>
       <div class="wrap px-main">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:end;margin-bottom:72px;"
           class="svc-hdr">
@@ -136,7 +142,13 @@
     </section>
 
     <!-- IMPERMEABILIZACIONES -->
-    <section class="py-sec" style="background:var(--cream);">
+    <section class="py-sec" style="background:var(--cream);position:relative;">
+      <svg class="mason-points dark" width="60" height="60" viewBox="0 0 100 100"
+        style="position: absolute; top: 60px; left: 40px; opacity: 0.1; pointer-events: none; z-index: 5;">
+        <circle cx="50" cy="25" r="6" />
+        <circle cx="28" cy="63" r="6" />
+        <circle cx="72" cy="63" r="6" />
+      </svg>
       <div class="wrap px-main">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;" class="svc-hdr">
           <div>

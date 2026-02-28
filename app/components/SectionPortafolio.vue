@@ -27,40 +27,35 @@
     <div class="wrap" style="padding:0 56px;">
       <div class="port-grid sr">
         <div class="port-item p1">
-          <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1000&q=85&auto=format&fit=crop"
-            alt="Residencia Serrana" />
+          <img src="/imagenes/trabajos-2.webp" alt="Residencia Serrana" />
           <div class="port-overlay">
             <div class="port-cat">Residencial · Tijuana</div>
             <div class="port-name">RESIDENCIA SERRANA</div>
           </div>
         </div>
         <div class="port-item p2">
-          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=700&q=85&auto=format&fit=crop"
-            alt="Corporativo" />
+          <img src="/imagenes/trabajos-5.webp" alt="Corporativo" />
           <div class="port-overlay">
             <div class="port-cat">Corporativo · Tijuana</div>
             <div class="port-name">SUITE EJECUTIVA ZONA RÍO</div>
           </div>
         </div>
         <div class="port-item p3">
-          <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600&q=85&auto=format&fit=crop"
-            alt="Villa" />
+          <img src="/imagenes/trabajos-4.webp" alt="Villa" />
           <div class="port-overlay">
             <div class="port-cat">Residencial</div>
             <div class="port-name">VILLA DEL PACÍFICO</div>
           </div>
         </div>
         <div class="port-item p4">
-          <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=85&auto=format&fit=crop"
-            alt="Casa premium" />
+          <img src="/imagenes/trabajos-3.webp" alt="Casa premium" />
           <div class="port-overlay">
             <div class="port-cat">Residencial · Tijuana</div>
             <div class="port-name">CASA CAÑÓN</div>
           </div>
         </div>
         <div class="port-item p5">
-          <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=500&q=85&auto=format&fit=crop"
-            alt="Plaza comercial" />
+          <img src="/imagenes/trabajos-2.webp" alt="Plaza comercial" />
           <div class="port-overlay">
             <div class="port-cat">Comercial</div>
             <div class="port-name">PLAZA PUERTO</div>

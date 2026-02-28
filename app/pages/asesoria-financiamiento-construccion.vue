@@ -3,7 +3,7 @@
     <section>
       <div id="hero" style="min-height:70vh;">
         <div class="hero-bg"
-          style="background-image:url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=2200&q=85&auto=format&fit=crop');background-position:center 40%;">
+          style="background-image:url('/imagenes/asesoria-financiera.webp');background-position:center 40%;">
         </div>
         <div class="hero-content wrap">
           <div class="hero-eyebrow sr">
@@ -27,7 +27,13 @@
       </div>
     </section>
 
-    <section id="servicios-asesoria" class="py-sec" style="background:var(--coal);">
+    <section id="servicios-asesoria" class="py-sec" style="background:var(--coal);position:relative;">
+      <svg class="mason-points light" width="60" height="60" viewBox="0 0 100 100"
+        style="position: absolute; top: 60px; right: 40px; opacity: 0.1; pointer-events: none; z-index: 5;">
+        <circle cx="50" cy="25" r="6" />
+        <circle cx="28" cy="63" r="6" />
+        <circle cx="72" cy="63" r="6" />
+      </svg>
       <div class="wrap px-main">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:end;margin-bottom:72px;"
           class="svc-hdr">
@@ -191,7 +197,13 @@
       </div>
     </section>
 
-    <section id="contacto-asesoria" class="py-sec" style="background:var(--cream);">
+    <section id="contacto-asesoria" class="py-sec" style="background:var(--cream);position:relative;">
+      <svg class="mason-points dark" width="60" height="60" viewBox="0 0 100 100"
+        style="position: absolute; top: 60px; left: 40px; opacity: 0.1; pointer-events: none; z-index: 5;">
+        <circle cx="50" cy="25" r="6" />
+        <circle cx="28" cy="63" r="6" />
+        <circle cx="72" cy="63" r="6" />
+      </svg>
       <div class="wrap px-main" style="text-align:center;max-width:720px;">
         <div class="eyebrow sr" style="justify-content:center;"><span class="t-label">Financie su proyecto</span></div>
         <h2 class="f-display t-section sr d1" style="color:var(--coal);margin-bottom:22px;">HAGAMOS VIABLE<br />SU

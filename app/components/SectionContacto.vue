@@ -1,5 +1,11 @@
 <template>
-  <section id="contacto" class="py-sec">
+  <section id="contacto" class="py-sec" style="position:relative;">
+    <svg class="mason-points dark" width="60" height="60" viewBox="0 0 100 100"
+      style="position: absolute; top: 40px; left: 60px; opacity: 0.1; pointer-events: none; z-index: 5;">
+      <circle cx="50" cy="25" r="6" />
+      <circle cx="28" cy="63" r="6" />
+      <circle cx="72" cy="63" r="6" />
+    </svg>
     <div class="wrap px-main">
       <div class="contact-grid">
 
