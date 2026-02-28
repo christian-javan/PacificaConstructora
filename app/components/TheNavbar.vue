@@ -1,7 +1,8 @@
 <template>
   <nav id="navbar" ref="navbarRef">
     <NuxtLink to="/" class="nav-logo">
-      <img src="/imagenes/pacifica-construccion-y-mantenimiento-logo-header.webp" alt="Pacifica Construcción y Mantenimiento Logo" class="nav-logo-img" />
+      <img src="/imagenes/pacifica-construccion-y-mantenimiento-logo-header.webp"
+        alt="Pacifica Construcción y Mantenimiento Logo" class="nav-logo-img" />
     </NuxtLink>
 
     <div class="nav-links">
@@ -11,6 +12,7 @@
       <NuxtLink to="/bienes-raices" class="nav-link">Bienes Raíces</NuxtLink>
       <NuxtLink to="/venta-de-propiedades" class="nav-link">Propiedades</NuxtLink>
       <NuxtLink to="/plan-blindaje" class="nav-link">Plan Blindaje</NuxtLink>
+      <NuxtLink to="/servicios-limpieza" class="nav-link">Limpieza</NuxtLink>
       <NuxtLink to="/asesoria-financiamiento-construccion" class="nav-link">Asesoría</NuxtLink>
     </div>
 
@@ -30,6 +32,7 @@
     <NuxtLink to="/bienes-raices" @click="closeMob">Bienes Raíces</NuxtLink>
     <NuxtLink to="/venta-de-propiedades" @click="closeMob">Propiedades</NuxtLink>
     <NuxtLink to="/plan-blindaje" @click="closeMob">Plan Blindaje</NuxtLink>
+    <NuxtLink to="/servicios-limpieza" @click="closeMob">Limpieza</NuxtLink>
     <NuxtLink to="/asesoria-financiamiento-construccion" @click="closeMob">Asesoría</NuxtLink>
     <NuxtLink to="/#contacto" @click="closeMob" style="color:var(--amber)">Contacto →</NuxtLink>
   </div>
@@ -39,7 +42,7 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 
 const navbarRef = ref(null)
-const mobOpen   = ref(false)
+const mobOpen = ref(false)
 const s1 = ref(null)
 const s2 = ref(null)
 const s3 = ref(null)
@@ -55,7 +58,7 @@ function toggleMob() {
   document.body.style.overflow = mobOpen.value ? 'hidden' : ''
   if (s1.value && s2.value && s3.value) {
     s1.value.style.transform = mobOpen.value ? 'rotate(45deg) translate(5px,5px)' : ''
-    s2.value.style.opacity   = mobOpen.value ? '0' : '1'
+    s2.value.style.opacity = mobOpen.value ? '0' : '1'
     s3.value.style.transform = mobOpen.value ? 'rotate(-45deg) translate(5px,-5px)' : ''
   }
 }

@@ -1649,3 +1649,12 @@ textarea.f-input {
     font-weight: 300;
     color: rgba(144, 136, 128, .5);
 }
+
+/* ══════════════════════════════════════════════
+   RESPONSIVE: NEW CONTENT GRIDS
+══════════════════════════════════════════════ */
+@media (max-width: 900px) {
+    .admin-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
